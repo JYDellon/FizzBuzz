@@ -1,0 +1,96 @@
+
+var fizzbuzz=0;
+var fizzbuzz2=0;
+var nbr0 =[0,0,0,0,0,0,0,0];
+var nbre1 = 0;
+var nbre2 = 0;
+var ok=[false,false,false,false];
+
+
+
+function fizzBuzzIntro(choix2){
+
+        if (choix2 == 2){
+            if (ok[0] == false){
+                fizzbuzz++;console.log(fizzbuzz);
+                ok[0] = true;
+                nbr0[2]=2;
+            }else if (ok[0] == true){
+                fizzbuzz--;console.log(fizzbuzz);
+                nbr0[2]=0;
+                ok[0] = false;
+            }
+        }
+        if (choix2 == 3){
+            if (ok[1] == false){
+                fizzbuzz++;console.log(fizzbuzz);
+                nbr0[3]=3;
+                ok[1] = true;
+            }else if (ok[1] == true){
+                fizzbuzz--;console.log(fizzbuzz);
+                nbr0[3]=0;
+                ok[1] = false;
+            }
+        }
+        if (choix2 == 5){
+            if (ok[2] == false){
+                fizzbuzz++;console.log(fizzbuzz);
+                nbr0[5]=5;
+                ok[2] = true;
+            }else if (ok[2] == true){
+                fizzbuzz--;console.log(fizzbuzz);
+                nbr0[5]=0;
+                ok[2] = false;
+            }
+        }
+        if (choix2 == 7){
+            if (ok[3] == false){
+                fizzbuzz++;console.log(fizzbuzz);
+                nbr0[7]=7;
+                ok[3] = true;
+            }else if (ok[3] == true){
+                fizzbuzz--;console.log(fizzbuzz);
+                nbr0[7]=0;
+                ok[3] = false;
+            }
+       
+        
+    }
+    if (fizzbuzz<2){
+        document.getElementById('deux').disabled= false;
+        document.getElementById('trois').disabled= false;
+        document.getElementById('cinq').disabled= false;
+        document.getElementById('sept').disabled= false;
+    }
+    if (fizzbuzz==2){
+        
+        for(let i=0;i<nbr0.length;i++){
+            
+            if (nbr0[i]!=0 ){
+                if (fizzbuzz2==0){
+                    nbre1=nbr0[i];
+                    console.log("nbre1: "+nbre1)
+                    localStorage.setItem('nbre1',nbre1);
+                    fizzbuzz2++;
+                }else {               
+                    nbre2=nbr0[i];
+                    console.log("nbre2: "+nbre2)
+                    localStorage.setItem('nbre2',nbre2);
+                }
+            }
+            if (nbr0[2]==0){
+                document.getElementById('deux').disabled= true;
+            }
+            if (nbr0[3]==0){
+                document.getElementById('trois').disabled= true;
+            }
+            if (nbr0[5]==0){
+                document.getElementById('cinq').disabled= true;
+            }
+            if (nbr0[7]==0){
+                document.getElementById('sept').disabled= true;
+            }
+
+        }
+    }
+}
