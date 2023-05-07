@@ -105,7 +105,7 @@ if (fin == false){
             scores();
 
         // ni l'un ni l'autre----------------------------------------------------
-        }else if ((nbre % nbre1 != 0 && nbre % nbre2 != 0) && (choix == "Ni l'un ni l'autre")){
+        }else if ((nbre%nbre1 != 0 && nbre%nbre2 != 0) && (choix == "Ni l'un ni l'autre")){
             result="CORRECT"
             compteur++;
             scores();

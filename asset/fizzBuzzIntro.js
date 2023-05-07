@@ -95,9 +95,6 @@ function fizzBuzzIntro(choix2){
                 if (fizzbuzz2==0){
                     nbre1=nbr0[i];
                     console.log("nbre1: "+nbre1)
-                    if (nbre1==2){
-                    
-                    }
                     localStorage.setItem('nbre1',nbre1);
                     fizzbuzz2++;
                 }else {               
@@ -123,8 +120,8 @@ function fizzBuzzIntro(choix2){
         }
     }
 }
-// function valid(){
-//     if (fizzbuzz==2){
-//         window.location.replace("http://127.0.0.1:5500/html/fizzBuzz.html");
-//     }
-// }
+function valid(){
+    if (fizzbuzz==2){
+        window.location.href='https://jydellon.github.io/FizzBuzz/html/fizzBuzz.html'
+    }
+}
