@@ -125,6 +125,6 @@ function fizzBuzzIntro(choix2){
 }
 function valid(){
     if (fizzbuzz==2){
-        window.location.href="http:/html/fizzBuzz.html";
+        window.location.href="http://127.0.0.1:5500/html/fizzBuzz.html";
     }
 }
