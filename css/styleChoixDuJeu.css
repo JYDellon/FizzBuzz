@@ -26,6 +26,12 @@ body{
         font-size: 3em;
         color: white;
     }
+    .container0{
+        margin-top: 2em;
+        font-size: 3em;
+        color: white;
+        text-align: center;
+    }
 }
 @media (max-width:767px){
     .container1{
@@ -38,5 +44,11 @@ body{
         text-decoration: none;
         font-size: 2em;
         color: white;
+    }
+    .container0{
+        margin-top: 2em;
+        font-size: 2em;
+        color: white;
+        text-align: center;
     }
 }
