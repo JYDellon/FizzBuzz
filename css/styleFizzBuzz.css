@@ -1,13 +1,10 @@
 body{
     background-image : url(../image/fondecran.jpg);
 }
-
 #lien{
     margin-top: 0.5em;
     text-align: center;
 }
-
-
 #lien button{
     border-radius: 40px;
 }

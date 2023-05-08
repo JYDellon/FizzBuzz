@@ -122,7 +122,8 @@ function fizzBuzzIntro(choix2){
 }
 function valid(){
     if (fizzbuzz==2){
-        window.location.href='https://jydellon.github.io/FizzBuzz/html/fizzBuzz.html'
+        window.location.href='https://jydellon.github.io/FizzBuzz/html/choixDuJeu.html'
+        // window.location.href='https://jydellon.github.io/FizzBuzz/html/fizzBuzz.html'
     }
 }
 
