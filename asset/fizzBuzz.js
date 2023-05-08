@@ -5,9 +5,11 @@ var trouver = new Boolean; trouver = false;
 var fin = new Boolean; fin = true;
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
-
+nbre1=localStorage.getItem('nbre1');
+nbre2=localStorage.getItem('nbre2');
 
 onload=function initialisation1(){
+    
    
     record1()
     document.getElementById('nbr').innerHTML = nbre;
@@ -43,17 +45,16 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                 clearInterval(monInterval);fin = true;
                 scores();
                 //-----------------------------------------------------------------------------------
-                if (localStorage.getItem('compteur') == null ){
+                if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
                 
-                    localStorage.setItem('compteur',compteur);
+                    localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                    document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + localStorage.getItem('compteur');
     
-                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
-    
-                }else if (localStorage.getItem('compteur') < compteur){
+                }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
                     win();
-                    localStorage.setItem('compteur',compteur);
-                    var record = localStorage.getItem('compteur');
-                    document.getElementById('record').innerHTML = "Record: " + record;
+                    localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                    var record = localStorage.getItem('compteur'+nbre1+nbre2);
+                    document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + record;
     
                 }
                 //------------------------------------------------------------------------------------
@@ -80,8 +81,8 @@ function initialisation2(){
 
 function fizzBuzz(choix){
 
-nbre1=localStorage.getItem('nbre1');
-nbre2=localStorage.getItem('nbre2');
+
+   
 
 if (fin == false){
         
@@ -112,16 +113,16 @@ if (fin == false){
         }else {
             scores();
             
-            if (localStorage.getItem('compteur') == null ){
+            if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
                 
-                localStorage.setItem('compteur',compteur);
-                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
+                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2);
 
-            }else if (localStorage.getItem('compteur') < compteur){
+            }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
                 
-                localStorage.setItem('compteur',compteur);
-                var record = localStorage.getItem('compteur');
-                document.getElementById('record').innerHTML = "Record: " + record;
+                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                var record = localStorage.getItem('compteur'+nbre1+nbre2);
+                document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + record;
 
             }
             
@@ -139,13 +140,14 @@ if (fin == false){
     }
 }
 function record1(){
-    if (localStorage.getItem('compteur') == null ){
+
+    if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
     
-        localStorage.setItem('compteur',0);
-        document.getElementById('record').innerHTML = "Record: " + 0;
+        localStorage.setItem('compteur'+nbre1+nbre2,0);
+        document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + 0;
     
     }else{
-        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
+        document.getElementById('record'+nbre1+nbre2).innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2)
     }
 }
 //-----------------------------------------------------------------------------------------------------------
