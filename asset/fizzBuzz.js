@@ -8,7 +8,7 @@ var result = "";
 
 
 body.onload=function initialisation1(){
-   localStorage.clear();
+  
     record1()
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
