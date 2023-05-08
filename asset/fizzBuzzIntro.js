@@ -125,3 +125,7 @@ function valid(){
         window.location.href='https://jydellon.github.io/FizzBuzz/html/fizzBuzz.html'
     }
 }
+
+
+//------------------------------------------------------------------------------------
+

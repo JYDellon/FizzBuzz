@@ -25,6 +25,9 @@ body{
     justify-content: space-evenly;
 }
 @media (min-width:768px){
+
+
+
 .container1{
     display: flex;
     justify-content: center;
