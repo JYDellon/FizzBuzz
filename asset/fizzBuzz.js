@@ -5,8 +5,7 @@ var trouver = new Boolean; trouver = false;
 var fin = new Boolean; fin = true;
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
-var nbre1=localStorage.getItem('nbre1');
-var nbre2=localStorage.getItem('nbre2');
+
 
 onload=function initialisation1(){
   
@@ -81,7 +80,8 @@ function initialisation2(){
 
 function fizzBuzz(choix){
 
-
+    var nbre1=localStorage.getItem('nbre1');
+    var nbre2=localStorage.getItem('nbre2');
 
 if (fin == false){
         
