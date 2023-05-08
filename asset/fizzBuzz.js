@@ -7,7 +7,7 @@ document.getElementById('azerty').innerHTML = nbre;
 var result = "";
 
 
-onload=function initialisation1(){
+body.onload=function initialisation1(){
   
     record1()
     document.getElementById('nbr').innerHTML = nbre;
