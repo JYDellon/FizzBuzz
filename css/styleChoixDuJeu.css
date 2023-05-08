@@ -15,18 +15,28 @@ body{
 }
 
 @media (min-width:768px){
-    .container0{
+    .container1{
         margin-top: 2em;
         font-size: 3em;
         color: white;
         text-align: center;
     }
+    #lien button a{
+        text-decoration: none;
+        font-size: 3em;
+        color: white;
+    }
 }
 @media (max-width:767px){
-    .container0{
+    .container1{
         margin-top: 2em;
         font-size: 2em;
         color: white;
         text-align: center;
+    }
+    #lien button a{
+        text-decoration: none;
+        font-size: 2em;
+        color: white;
     }
 }
