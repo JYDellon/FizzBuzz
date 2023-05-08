@@ -15,7 +15,7 @@ body{
     border-radius: 40px;
     width:100%;
 }
-.container1,.container2{
+.container1{
     margin-top: 8em;
 }
 
@@ -31,6 +31,9 @@ body{
         color: white;
         text-align: center;
     }
+    .container2{
+        margin-top: 8em;
+    }
 }
 @media (max-width:767px){
     #lien button a{
@@ -43,5 +46,8 @@ body{
         font-size: 2em;
         color: white;
         text-align: center;
+    }
+    .container2{
+        margin-top: 1em;
     }
 }
