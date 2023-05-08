@@ -43,16 +43,16 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                 clearInterval(monInterval);fin = true;
                 scores();
                 //-----------------------------------------------------------------------------------
-                if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
+                if (localStorage.getItem('compteur') == null ){
                 
-                    localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                    localStorage.setItem('compteur',compteur);
     
-                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2);
+                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
     
-                }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
+                }else if (localStorage.getItem('compteur') < compteur){
                     win();
-                    localStorage.setItem('compteur'+nbre1+nbre2,compteur);
-                    var record = localStorage.getItem('compteur'+nbre1+nbre2);
+                    localStorage.setItem('compteur',compteur);
+                    var record = localStorage.getItem('compteur');
                     document.getElementById('record').innerHTML = "Record: " + record;
     
                 }
@@ -112,15 +112,15 @@ if (fin == false){
         }else {
             scores();
             
-            if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
+            if (localStorage.getItem('compteur') == null ){
                 
-                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
-                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2);
+                localStorage.setItem('compteur',compteur);
+                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur');
 
-            }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
+            }else if (localStorage.getItem('compteur') < compteur){
                 
-                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
-                var record = localStorage.getItem('compteur'+nbre1+nbre2);
+                localStorage.setItem('compteur',compteur);
+                var record = localStorage.getItem('compteur');
                 document.getElementById('record').innerHTML = "Record: " + record;
 
             }
@@ -139,13 +139,13 @@ if (fin == false){
     }
 }
 function record1(){
-    if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
+    if (localStorage.getItem('compteur') == null ){
     
-        localStorage.setItem('compteur'+nbre1+nbre2,0);
+        localStorage.setItem('compteur',0);
         document.getElementById('record').innerHTML = "Record: " + 0;
     
     }else{
-        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2)
+        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur')
     }
 }
 //-----------------------------------------------------------------------------------------------------------
