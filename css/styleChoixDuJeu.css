@@ -1,0 +1,32 @@
+body{
+    background-image : url(../image/fondecran.jpg);
+}
+
+#lien{
+    margin-top: 0.5em;
+    text-align: center;
+}
+#lien button{
+    border-radius: 40px;
+}
+#lien .bouton{
+    border-radius: 40px;
+    width:100%;
+}
+
+@media (min-width:768px){
+    .container0{
+        margin-top: 2em;
+        font-size: 3em;
+        color: white;
+        text-align: center;
+    }
+}
+@media (max-width:767px){
+    .container0{
+        margin-top: 2em;
+        font-size: 2em;
+        color: white;
+        text-align: center;
+    }
+}
