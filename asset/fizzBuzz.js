@@ -139,9 +139,9 @@ if (fin == false){
     }
 }
 function record1(){
-    if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
+    if (localStorage.getItem('compteur') == null ){
     
-        localStorage.setItem('compteur'+nbre1+nbre2,0);
+        localStorage.setItem('compteur',0);
         document.getElementById('record').innerHTML = "Record: " + 0;
     
     }else{
