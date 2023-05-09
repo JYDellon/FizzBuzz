@@ -8,6 +8,7 @@ var result = "";
     var nbre1=localStorage.getItem('nbre1');
     var nbre2=localStorage.getItem('nbre2');
 
+
 onload=function initialisation1(){
   
     record1()
@@ -39,9 +40,10 @@ record1()
 
 var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s++;
 
-if (s<10 && s>0){
-}else if (s<0){
-                clearInterval(monInterval);fin = true;
+if (s<600 && s>590){document.getElementById('tempo').style.color="red";beep();
+}else if (s>=600){
+                clearInterval(monInterval);
+                fin = true;
                 scores();
                 //-----------------------------------------------------------------------------------
                 if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
