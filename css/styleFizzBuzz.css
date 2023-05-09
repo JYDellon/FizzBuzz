@@ -72,10 +72,15 @@ body{
         text-align: center;
     }
     
-    #resultat, #tempo{
+    #resultat{
         color: white;
         text-align: center;
         font-size: 2em;
+    }
+    #tempo{
+        color: white;
+        text-align: center;
+        font-size: 3em;
     }
     #record{
         color: white;
