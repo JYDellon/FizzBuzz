@@ -12,11 +12,6 @@ body{
     border-radius: 40px;
     width:100%;
 }
-.container3{
-    margin-top: 5em;
-    display: flex;
-    justify-content: space-evenly;
-}
 @media (min-width:768px){
     #lien button a{
         text-decoration: none;
