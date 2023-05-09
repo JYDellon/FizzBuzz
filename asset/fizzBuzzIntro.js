@@ -5,7 +5,6 @@ var nbr0 =[0,0,0,0,0,0,0,0];
 var nbre1 = 0;
 var nbre2 = 0;
 var ok=[false,false,false,false];
-localStorage.clear();
 
 
 
