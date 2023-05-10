@@ -89,9 +89,7 @@ function fizzBuzzIntro(choix2){
 //---------------------------------------------------------------
 
     if (fizzbuzz==2){
-        if (nbr0[2]==2){
-                    document.getElementById('deux').style.color='red';
-                }
+        
         for(let i=0;i<nbr0.length;i++){
             
             if (nbr0[i]!=0 ){
@@ -100,15 +98,15 @@ function fizzBuzzIntro(choix2){
                     nbre1=nbr0[i];
                     localStorage.setItem('nbre1',nbre1);
                     if (nbre1==2){document.getElementById('deux1').innerHTML="Fizz"}
-                    else if (nbre1==3){document.getElementById('trois1').innerHTML="Fizz"}
-                    else if (nbre1==5){document.getElementById('cinq1').innerHTML="Fizz"}
+                    if (nbre1==3){document.getElementById('trois1').innerHTML="Fizz"}
+                    if (nbre1==5){document.getElementById('cinq1').innerHTML="Fizz"}
                     fizzbuzz2++;
                 }else {               
                     nbre2=nbr0[i];
                     localStorage.setItem('nbre2',nbre2);
                     if (nbre2==3){document.getElementById('trois1').innerHTML="Buzz"}
-                    else if (nbre2==5){document.getElementById('cinq1').innerHTML="Buzz"}
-                    else if (nbre2==7){document.getElementById('sept1').innerHTML="Buzz"}
+                    if (nbre2==5){document.getElementById('cinq1').innerHTML="Buzz"}
+                    if (nbre2==7){document.getElementById('sept1').innerHTML="Buzz"}
                 }
             }
             if (nbr0[2]==0){
