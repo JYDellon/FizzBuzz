@@ -19,6 +19,7 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[2]=0;
                 ok[0] = false;
+                document.getElementById('deux1').innerHTML="2"
                 document.getElementById('deux1').style.color="white";
             }
         }
@@ -31,6 +32,7 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[3]=0;
                 ok[1] = false;
+                document.getElementById('trois1').innerHTML="3"
                 document.getElementById('trois1').style.color="white";
             }
         }
@@ -43,6 +45,7 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[5]=0;
                 ok[2] = false;
+                document.getElementById('cinq1').innerHTML="5"
                 document.getElementById('cinq1').style.color="white";
             }
         }
@@ -55,6 +58,7 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[7]=0;
                 ok[3] = false;
+                document.getElementById('sept1').innerHTML="7"
                 document.getElementById('sept1').style.color="white";
             }
        
@@ -95,10 +99,16 @@ function fizzBuzzIntro(choix2){
                 if (fizzbuzz2==0){
                     nbre1=nbr0[i];
                     localStorage.setItem('nbre1',nbre1);
+                    if (nbre1==2){document.getElementById('deux1').innerHTML="Fizz"}
+                    if (nbre1==3){document.getElementById('trois1').innerHTML="Fizz"}
+                    if (nbre1==5){document.getElementById('cinq1').innerHTML="Fizz"}
                     fizzbuzz2++;
                 }else {               
                     nbre2=nbr0[i];
                     localStorage.setItem('nbre2',nbre2);
+                    if (nbre1==3){document.getElementById('trois1').innerHTML="Buzz"}
+                    if (nbre1==2){document.getElementById('cinq1').innerHTML="Buzz"}
+                    if (nbre1==7){document.getElementById('sept1').innerHTML="Buzz"}
                 }
             }
             if (nbr0[2]==0){
