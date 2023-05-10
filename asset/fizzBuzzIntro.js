@@ -12,9 +12,11 @@ function fizzBuzzIntro(choix2){
 
         if (choix2 == 2){
             if (ok[0] == false){
+                fizzbuzz++;
                 ok[0] = true;
                 nbr0[2]=2;
             }else if (ok[0] == true){
+                fizzbuzz--;
                 nbr0[2]=0;
                 ok[0] = false;
                 document.getElementById('deux1').style.color="white";
@@ -22,9 +24,11 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 3){
             if (ok[1] == false){
+                fizzbuzz++;
                 nbr0[3]=3;
                 ok[1] = true;
             }else if (ok[1] == true){
+                fizzbuzz--;
                 nbr0[3]=0;
                 ok[1] = false;
                 document.getElementById('trois1').style.color="white";
@@ -32,9 +36,11 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 5){
             if (ok[2] == false){
+                fizzbuzz++;
                 nbr0[5]=5;
                 ok[2] = true;
             }else if (ok[2] == true){
+                fizzbuzz--;
                 nbr0[5]=0;
                 ok[2] = false;
                 document.getElementById('cinq1').style.color="white";
@@ -42,9 +48,11 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 7){
             if (ok[3] == false){
+                fizzbuzz++;
                 nbr0[7]=7;
                 ok[3] = true;
             }else if (ok[3] == true){
+                fizzbuzz--;
                 nbr0[7]=0;
                 ok[3] = false;
                 document.getElementById('sept1').style.color="white";
