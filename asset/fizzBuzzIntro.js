@@ -96,14 +96,8 @@ function fizzBuzzIntro(choix2){
                     nbre1=nbr0[i];
                     localStorage.setItem('nbre1',nbre1);
                     fizzbuzz2++;
-                    if(nbre1==2){document.getElementById('deux1').innerHTML="Fizz"}
-                    if(nbre1==3){document.getElementById('trois1').innerHTML="Fizz"}
-                    if(nbre1==5){document.getElementById('cinq1').innerHTML="Fizz"}
                 }else {               
                     nbre2=nbr0[i];
-                    if(nbre2==3){document.getElementById('deux1').innerHTML="Buzz"}
-                    if(nbre2==5){document.getElementById('cinq1').innerHTML="Buzz"}
-                    if(nbre2==7){document.getElementById('sept').innerHTML="Buzz"}
                     localStorage.setItem('nbre2',nbre2);
                 }
             }
