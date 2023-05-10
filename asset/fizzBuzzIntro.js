@@ -107,7 +107,7 @@ function fizzBuzzIntro(choix2){
                     nbre2=nbr0[i];
                     localStorage.setItem('nbre2',nbre2);
                     if (nbre1==3){document.getElementById('trois1').innerHTML="Buzz"}
-                    if (nbre1==2){document.getElementById('cinq1').innerHTML="Buzz"}
+                    if (nbre1==5){document.getElementById('cinq1').innerHTML="Buzz"}
                     if (nbre1==7){document.getElementById('sept1').innerHTML="Buzz"}
                 }
             }
