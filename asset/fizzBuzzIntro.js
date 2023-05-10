@@ -9,7 +9,7 @@ var ok=[false,false,false,false];
 
 
 function fizzBuzzIntro(choix2){
-
+    console.log(fizzbuzz);
         if (choix2 == 2){
             if (ok[0] == false){
                 fizzbuzz++;console.log(fizzbuzz);
@@ -64,7 +64,7 @@ function fizzBuzzIntro(choix2){
        
         
     }
-    if (fizzbuzz<2){
+    if (fizzbuzz<2){fizzbuzz2=0;
         
 //---------------------------------------------------------------
         document.getElementById('deux').disabled= false;
