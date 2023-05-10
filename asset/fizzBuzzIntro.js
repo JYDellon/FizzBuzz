@@ -12,11 +12,9 @@ function fizzBuzzIntro(choix2){
 
         if (choix2 == 2){
             if (ok[0] == false){
-                fizzbuzz++;console.log(fizzbuzz);
                 ok[0] = true;
                 nbr0[2]=2;
             }else if (ok[0] == true){
-                fizzbuzz--;console.log(fizzbuzz);
                 nbr0[2]=0;
                 ok[0] = false;
                 document.getElementById('deux1').style.color="white";
@@ -24,11 +22,9 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 3){
             if (ok[1] == false){
-                fizzbuzz++;console.log(fizzbuzz);
                 nbr0[3]=3;
                 ok[1] = true;
             }else if (ok[1] == true){
-                fizzbuzz--;console.log(fizzbuzz);
                 nbr0[3]=0;
                 ok[1] = false;
                 document.getElementById('trois1').style.color="white";
@@ -36,11 +32,9 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 5){
             if (ok[2] == false){
-                fizzbuzz++;console.log(fizzbuzz);
                 nbr0[5]=5;
                 ok[2] = true;
             }else if (ok[2] == true){
-                fizzbuzz--;console.log(fizzbuzz);
                 nbr0[5]=0;
                 ok[2] = false;
                 document.getElementById('cinq1').style.color="white";
@@ -48,11 +42,9 @@ function fizzBuzzIntro(choix2){
         }
         if (choix2 == 7){
             if (ok[3] == false){
-                fizzbuzz++;console.log(fizzbuzz);
                 nbr0[7]=7;
                 ok[3] = true;
             }else if (ok[3] == true){
-                fizzbuzz--;console.log(fizzbuzz);
                 nbr0[7]=0;
                 ok[3] = false;
                 document.getElementById('sept1').style.color="white";
@@ -94,12 +86,10 @@ function fizzBuzzIntro(choix2){
                 
                 if (fizzbuzz2==0){
                     nbre1=nbr0[i];
-                    console.log("nbre1: "+nbre1)
                     localStorage.setItem('nbre1',nbre1);
                     fizzbuzz2++;
                 }else {               
                     nbre2=nbr0[i];
-                    console.log("nbre2: "+nbre2)
                     localStorage.setItem('nbre2',nbre2);
                 }
             }
@@ -123,7 +113,6 @@ function fizzBuzzIntro(choix2){
 function valid(){
     if (fizzbuzz==2){
         window.location.href='https://jydellon.github.io/FizzBuzz/html/choixDuJeu.html'
-        // window.location.href='https://jydellon.github.io/FizzBuzz/html/fizzBuzz.html'
     }
 }
 
