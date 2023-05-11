@@ -104,7 +104,7 @@ if (fin == false){
             compteur = 0;
         }
 
-        if (result == "CORRECT" || erreur<3){
+        if (result == "CORRECT" && erreur<3){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                 document.getElementById('resultat').style.color="white";
             }
