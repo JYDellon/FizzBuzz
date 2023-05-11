@@ -119,7 +119,6 @@ function fizzBuzzIntro(choix2){
             }
             if (nbr0[7]==0){
                 document.getElementById('sept').disabled= true;
-                
             }
 
         }

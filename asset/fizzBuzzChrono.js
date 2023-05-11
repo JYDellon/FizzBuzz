@@ -7,9 +7,9 @@ for(let i=0;i<max;i++){
 }
 var nbre = Math.floor(Math.random() * max);tNbre[nbre]=true;
 var compteur = 0;
-var s=30;var s2 = 2;
-var trouver = new Boolean; 
-var fin = new Boolean; 
+var s2 = 2;
+var trouver = new Boolean;
+var fin = new Boolean;
 trouver = false;
 fin = true;
 
@@ -80,7 +80,9 @@ if (fin == false){
             compteur++;
             scores();
         }else {
+            scores();
             result="INCORRECT"
+            fin = true;
             
             if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
                 
@@ -107,8 +109,8 @@ if (fin == false){
             initialisation2()
         } else if (result =="INCORRECT" && erreur<=3){
             fin = false;
-        }else if (result =="INCORRECT" && erreur>3){
-            fin= true;
+        } else if (result =="INCORRECT" && erreur>3){
+            fin = true;
         }
         }
 }
