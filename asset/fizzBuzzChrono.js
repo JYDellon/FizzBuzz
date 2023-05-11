@@ -22,7 +22,7 @@ onload=function initialisation1(){
                                                 else if (s2<=1){
                                                                 clearInterval(monInterval2)
                                                                 fin = false;
-                                                                initialisation03()}
+                                                                initialisation02()}
                                                 s2--;beep();
                                             }, 1000);
 
@@ -30,47 +30,7 @@ onload=function initialisation1(){
 
 
 }
-function initialisation03(){
 
-document.getElementById('nbr').innerHTML = nbre;
-document.getElementById('nbr').style.color="white";
-
-record1()
-
-
-var monInterval = setInterval(function () {document.getElementById('tempo').innerHTML=s++;
-
-if (s<600 && s>590){document.getElementById('tempo').style.color="red";beep();
-}else if (s>=600){
-                clearInterval(monInterval);
-                fin = true;
-                scores();
-                //-----------------------------------------------------------------------------------
-                if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
-                
-                    localStorage.setItem('compteurChrono'+nbre1+nbre2,compteur);
-    
-                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono'+nbre1+nbre2);
-    
-                }else if (localStorage.getItem('compteurChrono'+nbre1+nbre2) < compteur){
-                    win();
-                    localStorage.setItem('compteurChrono'+nbre1+nbre2,compteur);
-                    var record = localStorage.getItem('compteurChrono'+nbre1+nbre2);
-                    document.getElementById('record').innerHTML = "Record: " + record;
-    
-                }
-                //------------------------------------------------------------------------------------
-                
-              }
-if(trouver == true){ 
-                    clearInterval(monInterval);fin = true;
-
-                    }
-}
-, 1000);
-
-
-}
 
 function initialisation2(){
     
