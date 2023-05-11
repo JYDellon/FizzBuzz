@@ -111,6 +111,8 @@ if (fin == false){
             scores();
         }else {
             scores();
+            fin = true;
+            
             
             if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
                 

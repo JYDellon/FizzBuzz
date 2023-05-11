@@ -25,12 +25,7 @@ onload=function initialisation1(){
                                                                 initialisation02()}
                                                 s2--;beep();
                                             }, 1000);
-
-    //------------------------
-
-
 }
-
 
 function initialisation2(){
     
@@ -42,8 +37,6 @@ function initialisation2(){
 }
 
 function fizzBuzz(choix){
-
-
 
 if (fin == false){
         
