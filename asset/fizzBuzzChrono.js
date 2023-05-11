@@ -1,4 +1,8 @@
 var nbre = Math.floor(Math.random() * 100);
+var tNbre = new Boolean([]);
+for(let i=0;i<max;i++){
+    tNbre[max]=false;
+}
 var compteur = 0;
 var s=0;var s2 = 2;
 var trouver = new Boolean; trouver = false;
@@ -30,7 +34,12 @@ onload=function initialisation1(){
 
 function initialisation2(){
     
-    nbre = Math.floor(Math.random() * 100);
+    nbre = Math.floor(Math.random() * max);
+    //-------gestion de la répétition des numéros-----------------
+    if (tNbre[nbre]==true){
+        initialisation2();
+    }else{tNbre[nbre]=true}
+    //------------------------------------------------------------
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     document.getElementById('azerty').innerHTML = nbre;
