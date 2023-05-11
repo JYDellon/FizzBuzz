@@ -87,16 +87,13 @@ if (fin == false){
             compteur = 0;
         }
 
-        if (result == "CORRECT"){
+        if (result == "CORRECT" || erreur<3){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                 document.getElementById('resultat').style.color="white";
             }
             
             initialisation2();
-            //----------------------------------------
-        } else if(result == "INCORRECT" && erreur<3){
-            initialisation2();
-        }//----------------------------------------
+        }
     }
 }
 function record1(){
