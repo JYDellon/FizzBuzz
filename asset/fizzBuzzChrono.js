@@ -111,18 +111,12 @@ function beep(){
     let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
     audio.play();
 }
-
-//-----------------------------------------------------------------------------------------------------------
-function win(){
-    let audio = new Audio("https://universal-soundbank.com/sounds/11497.mp3");
-    audio.play();    
-}
 //-----------------------------------------------------------------------------------------------------------
 function scores(){
     if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                     document.getElementById('resultat').style.color="white";
     }else{
-        document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
+        document.getElementById('resutat').innerHTML = compteur + " bonnes réponses";            
         document.getElementById('resultat').style.color="white";}
 }
 //-----------------------------------------------------------------------------------------------------------
