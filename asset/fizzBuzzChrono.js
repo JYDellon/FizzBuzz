@@ -28,7 +28,7 @@ onload=function initialisation1(){
         
                                                 if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
                                                 else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
-                                                else if (s2<=1){
+                                                else if (s2<=1){document.getElementById('tempo').innerHTML = " ";
                                                                 clearInterval(monInterval2)
                                                                 fin = false;
                                                                 initialisation03()}
