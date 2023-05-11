@@ -85,7 +85,6 @@ if (fin == false){
         }else {
             scores();
             result="INCORRECT"
-            fin = true;
             
             if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
                 
@@ -104,14 +103,16 @@ if (fin == false){
             compteur = 0;
         }
 
-        if (result == "CORRECT" && erreur<3){
+        if (result == "CORRECT"){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                 document.getElementById('resultat').style.color="white";
             }
             
             initialisation2()
-        } 
-    }
+        } else if (result =="INCORRECT" && erreur<3){
+            fin = false;
+        }
+        }
 }
 function record1(){
     if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
