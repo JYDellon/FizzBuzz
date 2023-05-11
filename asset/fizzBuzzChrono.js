@@ -96,6 +96,7 @@ if (fin == false){
             }
             
             trouver= true;
+            // compteur = 0;
         }
 
         if (result == "CORRECT"){
@@ -104,9 +105,9 @@ if (fin == false){
             }
             
             initialisation2()
-        } else if (result =="INCORRECT" && erreur<3){
+        } else if (result =="INCORRECT" && erreur<=3){
             fin = false;
-        }else {
+        }else if (result =="INCORRECT" && erreur>3){
             fin= true;
         }
         }
