@@ -137,7 +137,7 @@ function win(){
 }
 //-----------------------------------------------------------------------------------------------------------
 function scores(){
-    if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+    if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                     document.getElementById('resultat').style.color="white";
     }else{
         document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
