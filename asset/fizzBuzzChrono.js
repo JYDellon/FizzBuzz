@@ -35,9 +35,6 @@ onload=function initialisation1(){
                                                 s2--;beep();
                                             }, 1000);
 
-    //------------------------
-
-
 }
 
 function initialisation2(){
@@ -83,7 +80,6 @@ if (fin == false){
             compteur++;
             scores();
         }else {
-            scores();
             result="INCORRECT"
             
             if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
@@ -111,6 +107,8 @@ if (fin == false){
             initialisation2()
         } else if (result =="INCORRECT" && erreur<3){
             fin = false;
+        }else {
+            fin= true;
         }
         }
 }
