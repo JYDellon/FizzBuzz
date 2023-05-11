@@ -75,9 +75,10 @@ if (fin == false){
             compteur++;
             scores();
         }else {
-            scores();
+            //--------------------
             result="INCORRECT";
             erreur++;
+            //--------------------
             
             if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
                 
@@ -122,8 +123,9 @@ function beep(){
 }
 //-----------------------------------------------------------------------------------------------------------
 function scores(){
-    if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
+    if (compteur <=1){
+        document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+        document.getElementById('resultat').style.color="white";
     }else{
         document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
         document.getElementById('resultat').style.color="white";}
