@@ -1,8 +1,18 @@
-var nbre = Math.floor(Math.random() * 100);
+
+var max=100;
+var nbre = Math.floor(Math.random() * max);
+var tNbre = new Boolean([]);
+for(let i=0;i<max;i++){
+    tNbre[max]=false;
+}
+var nbre = Math.floor(Math.random() * max);tNbre[nbre]=true;
 var compteur = 0;
 var s=30;var s2 = 2;
-var trouver = new Boolean; trouver = false;
-var fin = new Boolean; fin = true;
+var trouver = new Boolean; 
+var fin = new Boolean; 
+trouver = false;
+fin = true;
+
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
     var nbre1=localStorage.getItem('nbre1');
@@ -72,7 +82,12 @@ if(trouver == true){
 
 function initialisation2(){
     
-    nbre = Math.floor(Math.random() * 100);
+    nbre = Math.floor(Math.random() * max);
+    //------------------------
+    if (tNbre[nbre]==true){
+        initialisation2();
+    }else{tNbre[nbre]=true}
+    //------------------------
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     document.getElementById('azerty').innerHTML = nbre;

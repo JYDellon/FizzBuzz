@@ -116,7 +116,7 @@ function scores(){
     if (compteur <= 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                     document.getElementById('resultat').style.color="white";
     }else{
-        document.getElementById('resutat').innerHTML = compteur + " bonnes réponses";            
+        document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
         document.getElementById('resultat').style.color="white";}
 }
 //-----------------------------------------------------------------------------------------------------------
