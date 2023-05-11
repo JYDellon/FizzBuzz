@@ -143,7 +143,6 @@ if (fin == false){
             }
             
             trouver= true;
-            compteur = 0;
         }
 
         if (result == "CORRECT"){
