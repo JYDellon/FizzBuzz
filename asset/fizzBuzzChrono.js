@@ -3,6 +3,7 @@ var compteur = 0;
 var s=0;var s2 = 2;
 var trouver = new Boolean; trouver = false;
 var fin = new Boolean; fin = true;
+var erreur=0;
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
     var nbre1=localStorage.getItem('nbre1');
@@ -66,8 +67,8 @@ if (fin == false){
             scores();
         }else {
             scores();
-            result="INCORRECT"
-            fin = true;
+            result="INCORRECT";
+            erreur++;
             
             if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
                 
@@ -91,8 +92,11 @@ if (fin == false){
                                 document.getElementById('resultat').style.color="white";
             }
             
-            initialisation2()
-        } 
+            initialisation2();
+            //----------------------------------------
+        } else if(result == "INCORRECT" && erreur<3){
+            initialisation2();
+        }//----------------------------------------
     }
 }
 function record1(){
