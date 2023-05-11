@@ -81,7 +81,7 @@ if (fin == false){
             scores();
         }else {
             scores();
-            result="INCORRECT"
+            result="INCORRECT"; erreur++;
             fin = true;
             
             if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
