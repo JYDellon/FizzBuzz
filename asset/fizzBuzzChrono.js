@@ -66,6 +66,8 @@ if (fin == false){
             scores();
         }else {
             scores();
+            result="INCORRECT"
+            fin = true;
             
             if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
                 
