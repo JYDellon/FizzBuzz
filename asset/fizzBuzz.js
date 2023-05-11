@@ -61,7 +61,7 @@ if (s<10 && s>0){document.getElementById('tempo').style.color="red";
                     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2);
     
                 }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
-                    win();
+                    
                     localStorage.setItem('compteur'+nbre1+nbre2,compteur);
                     var record = localStorage.getItem('compteur'+nbre1+nbre2);
                     document.getElementById('record').innerHTML = "Record: " + record;

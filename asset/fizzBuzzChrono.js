@@ -131,11 +131,6 @@ function beep(){
 }
 
 //-----------------------------------------------------------------------------------------------------------
-function win(){
-    let audio = new Audio("https://universal-soundbank.com/sounds/11497.mp3");
-    audio.play();    
-}
-//-----------------------------------------------------------------------------------------------------------
 function scores(){
     if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                     document.getElementById('resultat').style.color="white";
