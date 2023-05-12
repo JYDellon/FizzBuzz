@@ -4,7 +4,7 @@ var fizzbuzz2=0;
 var nbr0 =[0,0,0,0,0,0,0,0];
 var nbre1 = 0;
 var nbre2 = 0;
-var ok=[false,false,false,false];
+var ok=[false,false,false,false,false];
 
 
 
@@ -62,7 +62,22 @@ function fizzBuzzIntro(choix2){
             }
        
         
-    }
+        }
+        if (choix2 == 11){
+            if (ok[4] == false){
+                fizzbuzz++;
+                nbr0[11]=11;
+                ok[4] = true;
+            }else if (ok[4] == true){
+                fizzbuzz--;
+                nbr0[11]=0;
+                ok[4] = false;
+                document.getElementById('onze1').innerHTML="11"
+                document.getElementById('onze1').style.color="white";
+            }
+       
+        
+        }
     if (fizzbuzz<2){fizzbuzz2=0;
         
 //---------------------------------------------------------------
@@ -70,6 +85,7 @@ function fizzBuzzIntro(choix2){
         document.getElementById('trois').disabled= false;
         document.getElementById('cinq').disabled= false;
         document.getElementById('sept').disabled= false;
+        document.getElementById('onze').disabled= false;
     }
 //---------------------------------------------------------------
     if (nbr0[2]==2){
@@ -83,6 +99,9 @@ function fizzBuzzIntro(choix2){
     }
     if (nbr0[7]==7){
         document.getElementById('sept1').style.color="red";
+    }
+    if (nbr0[11]==11){
+        document.getElementById('onze1').style.color="red";
     }
 
 //---------------------------------------------------------------
@@ -99,6 +118,7 @@ function fizzBuzzIntro(choix2){
                     if (nbre1==2){document.getElementById('deux1').innerHTML="Fizz"}
                     if (nbre1==3){document.getElementById('trois1').innerHTML="Fizz"}
                     if (nbre1==5){document.getElementById('cinq1').innerHTML="Fizz"}
+                    if (nbre1==7){document.getElementById('sept1').innerHTML="Fizz"}
                     fizzbuzz2++;
                 }else {               
                     nbre2=nbr0[i];
@@ -106,6 +126,7 @@ function fizzBuzzIntro(choix2){
                     if (nbre2==3){document.getElementById('trois1').innerHTML="Buzz"}
                     if (nbre2==5){document.getElementById('cinq1').innerHTML="Buzz"}
                     if (nbre2==7){document.getElementById('sept1').innerHTML="Buzz"}
+                    if (nbre2==11){document.getElementById('onze1').innerHTML="Buzz"}
                 }
             }
             if (nbr0[2]==0){
@@ -119,6 +140,9 @@ function fizzBuzzIntro(choix2){
             }
             if (nbr0[7]==0){
                 document.getElementById('sept').disabled= true;
+            }
+            if (nbr0[11]==0){
+                document.getElementById('onze').disabled= true;
             }
 
         }
