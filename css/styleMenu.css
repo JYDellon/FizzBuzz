@@ -1,0 +1,118 @@
+.controle{
+	
+    display:grid;
+    grid:2rem/repeat(2,1fr);
+    place-items:center
+        
+        }
+        
+    button{
+         
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    background: #eee
+    
+        } 
+        
+        
+    .contenu-carrousel {
+        
+    margin: 5rem auto;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px
+        
+    }
+    
+    .carrousel {
+        
+     height: 100%;
+     width: 100%;
+     position: absolute;
+     transform-style: preserve-3d;
+     transition: transform 1s;
+
+    }
+    
+    .carrousel div {
+        
+    backface-visibility: hidden;
+    box-shadow: 0 10px 10px rgba(0,0,0,.6);
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    outline: 1px solid transparent
+        
+    }
+        
+    .carrousel div:nth-child(1) {
+        
+    transform: rotateY(0) translateZ(270px);
+    background:url(../image/MONDE0/01.jpg) no-repeat center center/cover
+
+    }
+        
+    .carrousel div:nth-child(2) {
+        
+    transform: rotateY(36deg) translateZ(270px);
+    background:url(../image/MONDE0/02.jpg) no-repeat center center/cover
+    
+    }
+        
+    .carrousel div:nth-child(3) {
+        
+    transform: rotateY(72deg) translateZ(270px);
+    background:url(../image/MONDE0/03.jpg) no-repeat center center/cover
+        
+    }
+        
+    .carrousel div:nth-child(4) {
+        
+    transform: rotateY(108deg) translateZ(270px);
+    background:url(../image/MONDE0/04.jpg) no-repeat center center/cover
+        
+    }
+        
+    .carrousel div:nth-child(5) {
+        
+    transform: rotateY(144deg) translateZ(270px);
+    background:url(../image/MONDE0/05.jpg) no-repeat center center/cover
+        
+    } 
+        
+    .carrousel div:nth-child(6) {
+        
+    transform: rotateY(180deg) translateZ(270px);
+    background:url(../image/MONDE0/06.jpg) no-repeat center center/cover
+        
+    }	
+    
+    .carrousel div:nth-child(7) {
+        
+        transform: rotateY(216deg) translateZ(270px);
+        background:url(../image/MONDE0/07.jpg) no-repeat center center/cover
+            
+    }	
+    
+    .carrousel div:nth-child(8) {
+        
+         transform: rotateY(252deg) translateZ(270px);
+        background:url(../image/MONDE0/08.jpg) no-repeat center center/cover
+                
+    }	
+    
+    .carrousel div:nth-child(9) {
+        
+        transform: rotateY(288deg) translateZ(270px);
+        background:url(../image/MONDE0/09.jpg) no-repeat center center/cover
+                    
+    }	
+    .carrousel div:nth-child(10) {
+        
+        transform: rotateY(324deg) translateZ(270px);
+        background:url(../image/MONDE0/10.jpg) no-repeat center center/cover
+                        
+    }	
+                                
