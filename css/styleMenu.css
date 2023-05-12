@@ -55,24 +55,24 @@
     }
         
     .carrousel div:nth-child(2) {
-        
+    
     transform: rotateY(36deg) translateZ(270px);
     background:url(../image/MONDE0/02.jpg) no-repeat center center/cover
     
     }
-        
+    
     .carrousel div:nth-child(3) {
         
     transform: rotateY(72deg) translateZ(270px);
     background:url(../image/MONDE0/03.jpg) no-repeat center center/cover
-        
+    
     }
-        
+    
     .carrousel div:nth-child(4) {
-        
+    
     transform: rotateY(108deg) translateZ(270px);
     background:url(../image/MONDE0/04.jpg) no-repeat center center/cover
-        
+    
     }
         
     .carrousel div:nth-child(5) {
@@ -114,5 +114,5 @@
         transform: rotateY(324deg) translateZ(270px);
         background:url(../image/MONDE0/10.jpg) no-repeat center center/cover
                         
-    }	
+    }
                                 

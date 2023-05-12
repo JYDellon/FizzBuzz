@@ -4,12 +4,12 @@ function carrousel(sign){
 
     spinner=document.querySelector(".carrousel");
     
-    if(!sign){angle = angle + 36 
-    }else{ 
+    if(!sign){angle = angle + 36;
+    }else{
     
-    angle = angle - 36
+    angle = angle - 36;
     
     }
-    spinner.setAttribute("style","transform:rotateY("+ angle +"deg);")
+    spinner.setAttribute("style","transform:rotateY("+ angle +"deg);");
 
 }
