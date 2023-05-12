@@ -1,4 +1,4 @@
-
+localStorage.clear();
 var fizzbuzz=0;
 var fizzbuzz2=0;
 var nbr0 =[0,0,0,0,0,0,0,0];
