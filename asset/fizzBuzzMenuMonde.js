@@ -50,7 +50,6 @@ $items.forEach((item, i) => {
     if (mondeParcouru[i]==true){
       window.location.href='https://jydellon.github.io/FizzBuzz/';
     }
-    console.log(i)
   })
 })
 
