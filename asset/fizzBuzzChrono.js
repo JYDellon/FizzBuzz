@@ -5,7 +5,8 @@ var tNbre = new Boolean([]);
 for(let i=0;i<max;i++){
     tNbre[max]=false;
 }
-var nbre = Math.floor(Math.random() * max);tNbre[nbre]=true;
+var nbre = Math.floor(Math.random() * max);
+tNbre[nbre]=true;
 var compteur = 0;
 var s2 = 2;
 var trouver = new Boolean;

@@ -5,7 +5,9 @@ let progress = 50
 let startX = 0
 let active = 0
 let isDown = false
-
+var mondeParcouru = new Boolean([]);
+var mondeParcouru=[true,false,false,false,false,false,false,false,false,false];
+var valeur=0;
 /*--------------------
 Contants
 --------------------*/
@@ -45,7 +47,10 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    window.location.href='https://jydellon.github.io/FizzBuzz/';
+    if (mondeParcouru[i]==true){
+      window.location.href='https://jydellon.github.io/FizzBuzz/';
+    }
+    console.log(i)
   })
 })
 
@@ -93,11 +98,12 @@ document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
 
 //----------------------------------------------------------------------
-function mondePossible(numMonde){
-  h=document.getElementById('imageMonde01')
-  h.addEventListener("click", fun(numMonde));    
 
-}
 function fun(valeur){
-  if (valeur==1) {window.location.href='https://jydellon.github.io/FizzBuzz/';}
-}
+
+    if (mondeParcouru[valeur]=true){
+      window.location.href='https://jydellon.github.io/FizzBuzz/';
+    }
+  }
+
+  
