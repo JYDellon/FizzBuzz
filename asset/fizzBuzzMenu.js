@@ -45,8 +45,7 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    progress = (i/$items.length) * 100 + 10
-    animate()
+    window.location.href='https://jydellon.github.io/FizzBuzz/';
   })
 })
 
@@ -92,3 +91,13 @@ document.addEventListener('mouseup', handleMouseUp)
 document.addEventListener('touchstart', handleMouseDown)
 document.addEventListener('touchmove', handleMouseMove)
 document.addEventListener('touchend', handleMouseUp)
+
+//----------------------------------------------------------------------
+function mondePossible(numMonde){
+  h=document.getElementById('imageMonde01')
+  h.addEventListener("click", fun(numMonde));    
+
+}
+function fun(valeur){
+  if (valeur==1) {window.location.href='https://jydellon.github.io/FizzBuzz/';}
+}
