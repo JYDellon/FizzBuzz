@@ -101,7 +101,7 @@ document.addEventListener('touchend', handleMouseUp)
 function fun(valeur){
 
     if (mondeParcouru[valeur]=true){
-      window.location.href='https://jydellon.github.io/FizzBuzz/html/ChoixDiviseurMonde0Niveau0.html';
+      window.location.href='https://jydellon.github.io/FizzBuzz/html/choixDiviseurMonde0Niveau0.html';
     }
   }
 
