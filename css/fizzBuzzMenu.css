@@ -78,7 +78,7 @@ body {
     top: 10px;
     left: 20px;
     transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-    font-size: clamp(20px, 10vw, 80px);
+    font-size: clamp(10px, 5vw, 40px);
   }
 
   img {
