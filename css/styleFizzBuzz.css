@@ -1,5 +1,8 @@
 body{
-    background-image : url(../image/fondecran.jpg);
+    background-image : url(../image/lesDixMondes/00.jpg);
+    background-position: center;     
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #lien{
     margin-top: 0.5em;
