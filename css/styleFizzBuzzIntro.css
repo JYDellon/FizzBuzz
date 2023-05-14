@@ -1,5 +1,17 @@
 body{
     background-image : url(../image/lesDixMondes/00.jpg);
+    
+        /* On met en place le fond d'écran */
+        min-height: 100%;
+        min-width: 1024px;
+        /* On indique un redimensionnement proportionnel */
+        width: 100%;
+        height: auto;
+        /* L'image est positionnée en haut à gauche */
+        position: fixed;
+        top: 0;
+        left: 0;
+     
 }
 
 #lien{
