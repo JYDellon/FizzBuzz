@@ -7,7 +7,7 @@ body{
     background-image : url(../image/lesDixMondes/00.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% auto;
 }
 
 #lien{
