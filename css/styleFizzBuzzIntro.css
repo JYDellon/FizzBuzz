@@ -1,7 +1,8 @@
 body{
     background-image : url(../image/lesDixMondes/00.jpg);
-    background-position: center;
+    background-position: center;     
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #lien{
