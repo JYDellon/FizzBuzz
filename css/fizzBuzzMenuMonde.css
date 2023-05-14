@@ -13,7 +13,7 @@ body {
 }
 
 .carousel-item {
-  --items: 10;
+  --items: 11;
   --width: clamp(150px, 30vw,  300px);
   --height: clamp(200px, 40vw,  400px);
   --x: calc(var(--active) * 800%);
@@ -159,6 +159,7 @@ body {
   a {
     display: inline-block;
     margin-left: 3px;
+    height: 100%;
   }
 
   svg {

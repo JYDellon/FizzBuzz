@@ -6,7 +6,7 @@ let startX = 0
 let active = 0
 let isDown = false
 var mondeParcouru = new Boolean([]);
-var mondeParcouru=[true,false,false,false,false,false,false,false,false,false];
+var mondeParcouru=[true,false,false,false,false,false,false,false,false,false,false];
 var valeur=0;
 /*--------------------
 Contants
