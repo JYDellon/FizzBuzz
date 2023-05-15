@@ -41,9 +41,9 @@
 @media (min-width:501px) and (max-width:767px){
     body{
         background-image : url(../image/lesDixMondes/00.jpg);
-        background-position: top;
+        background-position: center;
         background-repeat: no-repeat;
-        background-size:155%;
+        background-size:cover;
     }
     .container1{
         margin-top: 2em;
