@@ -89,18 +89,23 @@ function fizzBuzzIntro(choix2){
     }
 //---------------------------------------------------------------
     if (nbr0[2]==2){
+        document.getElementById('deux1').innerHTML="Fizz";
         document.getElementById('deux1').style.color="red";
     }
     if (nbr0[3]==3){
+        document.getElementById('deux1').innerHTML="Fizz";
         document.getElementById('trois1').style.color="red";
     }
     if (nbr0[5]==5){
+        document.getElementById('deux1').innerHTML="Fizz";
         document.getElementById('cinq1').style.color="red";
     }
     if (nbr0[7]==7){
+        document.getElementById('deux1').innerHTML="Fizz";
         document.getElementById('sept1').style.color="red";
     }
     if (nbr0[11]==11){
+        document.getElementById('deux1').innerHTML="Fizz";
         document.getElementById('onze1').style.color="red";
     }
 
