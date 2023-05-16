@@ -98,11 +98,11 @@ document.addEventListener('touchend', handleMouseUp)
 
 //----------------------------------------------------------------------
 
-function fun(valeur){
+// function fun(valeur){
 
-    if (mondeParcouru[valeur]=true){
-      window.location.href='https://jydellon.github.io/FizzBuzz/html/ChoixDiviseurMonde0Niveau0.html';
-    }
-  }
+//     if (mondeParcouru[valeur]=true){
+//       window.location.href='https://jydellon.github.io/FizzBuzz/html/ChoixDiviseurMonde0Niveau0.html';
+//     }
+//   }
 
   
