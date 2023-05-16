@@ -5,7 +5,7 @@ var nbr0 =[0,0,0,0,0,0,0,0];
 var nbre1 = 0;
 var nbre2 = 0;
 var ok=[false,false,false,false,false];
-
+document.getElementById('deux').style.filter = "brightness(50%)";
 
 function fizzBuzzIntro(choix2){
         if (choix2 == 2){
