@@ -48,7 +48,7 @@ Click on Items
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
     if (mondeParcouru[i]==true){
-      window.location.href='https://jydellon.github.io/FizzBuzz/html/ChoixDiviseurMonde0Niveau0.html';
+      window.location.href='https://jydellon.github.io/FizzBuzz/html/menuTraining.html';
     }
   })
 })

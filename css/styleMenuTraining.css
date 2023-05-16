@@ -1,0 +1,21 @@
+body{
+    background-image : url(../image/lesDixMondes/00.jpg);
+    background-position: center;     
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.3em;
+}
+.container{
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    margin-top: 3em;
+}
+.card-body{
+    background-color: rgb(222, 148, 103);
+    color: white;
+    font-size: 1.3em;
+}
