@@ -20,6 +20,7 @@ body{
 }
 #lien button a{
     text-decoration: none;
+    color: white;
 }
 #lien{
     margin-top: 0.5em;
@@ -34,4 +35,5 @@ body{
 }
 a{
     text-decoration: none;
+    color: white;
 }
