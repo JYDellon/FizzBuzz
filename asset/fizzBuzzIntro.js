@@ -32,7 +32,6 @@ function fizzBuzzIntro(choix2){
                 ok[1] = false;
                 document.getElementById('trois1').innerHTML="3";
                 document.getElementById('trois1').style.color="white";
-                document.getElementById('trois').style.opacity = "0";
             }
         }
         if (choix2 == 5){
