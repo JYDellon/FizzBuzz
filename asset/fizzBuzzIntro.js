@@ -17,7 +17,7 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[2]=0;
                 ok[0] = false;
-                document.getElementById('deux1').innerHTML="2"
+                document.getElementById('deux1').innerHTML="2";
                 document.getElementById('deux1').style.color="white";
             }
         }
@@ -30,9 +30,8 @@ function fizzBuzzIntro(choix2){
                 fizzbuzz--;
                 nbr0[3]=0;
                 ok[1] = false;
-                document.getElementById('trois1').innerHTML="3"
+                document.getElementById('trois1').innerHTML="3";
                 document.getElementById('trois1').style.color="white";
-                document.getElementById('trois1').style.opacity = "0.5"; 
             }
         }
         if (choix2 == 5){
