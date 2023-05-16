@@ -7,7 +7,6 @@ var nbre2 = 0;
 var ok=[false,false,false,false,false];
 
 
-
 function fizzBuzzIntro(choix2){
         if (choix2 == 2){
             if (ok[0] == false){
@@ -33,6 +32,7 @@ function fizzBuzzIntro(choix2){
                 ok[1] = false;
                 document.getElementById('trois1').innerHTML="3"
                 document.getElementById('trois1').style.color="white";
+                document.getElementById('trois1').style.opacity = "1"; 
             }
         }
         if (choix2 == 5){
