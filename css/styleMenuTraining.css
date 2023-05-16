@@ -1,8 +1,8 @@
 body{
     background-image : url(../image/lesDixMondes/00.jpg);
-    background-position: center;     
+    background-position: top;     
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 135%;
 }
 .container{
     margin-top: 2em;
