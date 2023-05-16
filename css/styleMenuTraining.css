@@ -19,3 +19,24 @@ body{
     color: white;
     font-size: 1.3em;
 }
+#lien button a{
+    text-decoration: none;
+    font-size: 3em;
+    color: white;
+}
+#lien{
+    margin-top: 0.5em;
+    text-align: center;
+}
+#lien button{
+    border-radius: 40px;
+}
+#lien .bouton{
+    border-radius: 40px;
+    width:100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+}
