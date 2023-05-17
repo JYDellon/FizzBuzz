@@ -196,7 +196,7 @@ function fizzBuzz(choix){
         } 
     }
 
-
+}
 function record1(){
     if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
     
