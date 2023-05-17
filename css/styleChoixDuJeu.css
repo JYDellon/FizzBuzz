@@ -65,6 +65,9 @@
         color: white;
         text-align: center;
     }
+    .container2{
+        margin-top: 30em;
+    }
 }
 @media (max-width:500px){
     body{
@@ -90,5 +93,8 @@
         font-size: 2em;
         color: white;
         text-align: center;
+    }
+    .container2{
+        margin-top: 5em;
     }
 }
