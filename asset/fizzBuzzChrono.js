@@ -14,6 +14,8 @@ var fin = new Boolean;
 trouver = false;
 fin = true;
 
+const NbreDeDiviseur = localStorage.getItem('NbreDeDiviseur');
+
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
     var nbre1=localStorage.getItem('nbre1');
@@ -54,7 +56,7 @@ function initialisation2(){
 
 function fizzBuzz(choix){
 
-if (fin == false){
+    if (fin == false && NbreDeDiviseur == 2){
         
         // fizz buzz-------------------------------------------------------------
         if ((nbre%nbre1 == 0 && nbre%nbre2 == 0) && (choix == "Fizz-Buzz")){
@@ -112,7 +114,52 @@ if (fin == false){
         } else if (result =="INCORRECT" && erreur>3){
             fin = true;
         }
+    }else if (fin == false && NbreDeDiviseur == 1){
+        
+        // fizz -----------------------------------------------------------------
+        if ((nbre%nbre1 == 0) && (choix == "Fizz")){
+            result="CORRECT"
+            compteur++;
+            scores();
+
+        // ni l'un ni l'autre----------------------------------------------------
+        }else if ((nbre%nbre1 != 0) && (choix == "Ni l'un ni l'autre")){
+            result="CORRECT"
+            compteur++;
+            scores();
+        }else {
+            scores();
+            result="INCORRECT"; erreur++;
+            fin = true;
+            
+            if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+                
+                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+
+            }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
+                
+                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+                document.getElementById('record').innerHTML = "Record: " + record;
+
+            }
+            
+            trouver= true;
         }
+
+        if (result == "CORRECT"){
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                document.getElementById('resultat').style.color="white";
+            }
+            
+            initialisation2()
+        } else if (result =="INCORRECT" && erreur<=3){
+            fin = false;
+        } else if (result =="INCORRECT" && erreur>3){
+            fin = true;
+        }
+    }
 }
 function record1(){
     if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) == null ){
