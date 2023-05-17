@@ -1,3 +1,6 @@
+.bouton:hover{
+    background-color: rgb(222, 149, 103);
+}
 @media (min-width:768px){
     body{
         background-image : url(../image/lesDixMondes/00.jpg);
