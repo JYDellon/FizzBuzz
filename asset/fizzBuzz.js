@@ -13,6 +13,8 @@ var fin = new Boolean;
 trouver = false;
 fin = true;
 
+const NbreDeDiviseur = localStorage.getItem('NbreDeDiviseur');
+
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
     var nbre1=localStorage.getItem('nbre1');
@@ -34,8 +36,6 @@ onload=function initialisation1(){
                                                                 initialisation03()}
                                                 s2--;beep();
                                             }, 1000);
-
-    //------------------------
 
 
 }
@@ -98,10 +98,10 @@ function fizzBuzz(choix){
 
 
 
-if (fin == false){
+    if (fin == false && NbreDeDiviseur==2){
         
         // fizz buzz-------------------------------------------------------------
-        if ((nbre%nbre1 == 0 && nbre%nbre2 == 0) && (choix == "Fizz-Buzz")){
+        if ((nbre%nbre1 == 0 && nbre%nbre2 == 0 ) && (choix == "Fizz-Buzz")){
 
             result="CORRECT"
             compteur++;
@@ -120,6 +120,47 @@ if (fin == false){
             scores();
 
         // ni l'un ni l'autre----------------------------------------------------
+        }else if ((nbre%nbre1 != 0 && nbre%nbre2 != 0) && (choix == "Ni l'un ni l'autre")){
+            result="CORRECT"
+            compteur++;
+            scores();
+        }else {
+            scores();
+            result="INCORRECT"
+            fin = true;
+            
+            if (localStorage.getItem('compteur'+nbre1+nbre2) == null ){
+                
+                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteur'+nbre1+nbre2);
+
+            }else if (localStorage.getItem('compteur'+nbre1+nbre2) < compteur){
+                
+                localStorage.setItem('compteur'+nbre1+nbre2,compteur);
+                var record = localStorage.getItem('compteur'+nbre1+nbre2);
+                document.getElementById('record').innerHTML = "Record: " + record;
+
+            }
+            
+            trouver= true;
+        }
+
+        if (result == "CORRECT"){
+            if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
+                                document.getElementById('resultat').style.color="white";
+            }
+            
+            initialisation2()
+        } 
+    }else if (fin == false && NbreDeDiviseur==1{
+        
+        // fizz buzz-------------------------------------------------------------
+        if ((nbre%nbre1 == 0) && (choix == "Fizz")){
+            result="CORRECT"
+            compteur++;
+            scores();
+
+        // buzz------------------------------------------------------------------
         }else if ((nbre%nbre1 != 0 && nbre%nbre2 != 0) && (choix == "Ni l'un ni l'autre")){
             result="CORRECT"
             compteur++;
