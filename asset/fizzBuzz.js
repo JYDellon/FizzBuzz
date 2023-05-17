@@ -152,16 +152,17 @@ function fizzBuzz(choix){
             
             initialisation2()
         } 
-    }else if (fin == false && NbreDeDiviseur==1{
+    }else if (fin == false && NbreDeDiviseur==1){
         
-        // fizz buzz-------------------------------------------------------------
-        if ((nbre%nbre1 == 0) && (choix == "Fizz")){
+ 
+        // fizz -----------------------------------------------------------------
+        }else if ((nbre%nbre1 == 0) && (choix == "Fizz")){
             result="CORRECT"
             compteur++;
             scores();
 
-        // buzz------------------------------------------------------------------
-        }else if ((nbre%nbre1 != 0 && nbre%nbre2 != 0) && (choix == "Ni l'un ni l'autre")){
+        // ni l'un ni l'autre----------------------------------------------------
+        }else if ((nbre%nbre1 != 0) && (choix == "Ni l'un ni l'autre")){
             result="CORRECT"
             compteur++;
             scores();
@@ -193,6 +194,7 @@ function fizzBuzz(choix){
             
             initialisation2()
         } 
+    }
     }
 }
 function record1(){
