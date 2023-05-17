@@ -156,7 +156,7 @@ function fizzBuzz(choix){
         
  
         // fizz -----------------------------------------------------------------
-        }else if ((nbre%nbre1 == 0) && (choix == "Fizz")){
+        if ((nbre%nbre1 == 0) && (choix == "Fizz")){
             result="CORRECT"
             compteur++;
             scores();
@@ -185,7 +185,7 @@ function fizzBuzz(choix){
             }
             
             trouver= true;
-    }
+        }
 
         if (result == "CORRECT"){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
@@ -194,7 +194,7 @@ function fizzBuzz(choix){
             
             initialisation2()
         } 
-}
+    }
 
 
 function record1(){
