@@ -6,7 +6,9 @@ let startX = 0
 let active = 0
 let isDown = false
 var mondeParcouru = new Boolean([]);
-var mondeParcouru=[true,false,false,false,false,false,false,false,false,false,false];
+mondeParcouru=[true,true,false,false,false,false,false,false,false,false,false];
+var tAdress = new String ([11]);
+tAdress=['https://jydellon.github.io/FizzBuzz/html/menuTraining.html','https://jydellon.github.io/FizzBuzz/html/menuMonde01.html','https://jydellon.github.io/FizzBuzz/html/menuMonde02.html','https://jydellon.github.io/FizzBuzz/html/menuMonde03.html','https://jydellon.github.io/FizzBuzz/html/menuMonde04.html','https://jydellon.github.io/FizzBuzz/html/menuMonde05.html','https://jydellon.github.io/FizzBuzz/html/menuMonde06.html','https://jydellon.github.io/FizzBuzz/html/menuMonde07.html','https://jydellon.github.io/FizzBuzz/html/menuMonde08.html','https://jydellon.github.io/FizzBuzz/html/menuMonde09.html','https://jydellon.github.io/FizzBuzz/html/menuMonde10.html'];
 var valeur=0;
 /*--------------------
 Contants
@@ -47,8 +49,8 @@ Click on Items
 --------------------*/
 $items.forEach((item, i) => {
   item.addEventListener('click', () => {
-    if (mondeParcouru[i]==true){
-      window.location.href='https://jydellon.github.io/FizzBuzz/html/menuTraining.html';
+    if (mondeParcouru[i] == true){
+      window.location.href=tAdress[i];
     }
   })
 })
