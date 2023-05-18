@@ -111,22 +111,22 @@ function fizzBuzz(choix){
             compteur++;
             scores();
         }else {
-            scores();
+            // scores();
             result="INCORRECT"; erreur++;
             fin = true;
             
-            if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+            // if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
                 
-                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+            //     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
 
-            }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
+            // }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
                 
-                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-                var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
-                document.getElementById('record').innerHTML = "Record: " + record;
+            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+            //     var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+            //     document.getElementById('record').innerHTML = "Record: " + record;
 
-            }
+            // }
             
             trouver= true;
         }
