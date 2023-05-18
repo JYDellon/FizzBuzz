@@ -41,7 +41,7 @@ onload=function initialisation1(){
     //                                             s2--;beep();
     //                                         }, 1000);
 
-    myInterval2 = setInterval(afficher,20)
+    myInterval2 = setInterval(afficher,12.5)
 }
 
 function afficher(){
@@ -49,7 +49,7 @@ function afficher(){
     document.getElementById('tempo').innerHTML = text[a];
     console.log(text[a]);
 
-    if (j<50){
+    if (j<80){
 
         j++;
         document.getElementById('tempo').style.fontSize = j+"px";
