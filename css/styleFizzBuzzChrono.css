@@ -73,7 +73,7 @@ img{
 }
 @media (min-width:501px) and (max-width:767px){
     .vies{
-        margin-top: 1em;
+        margin-top: 0.75em;
         display: flex;
     }
     #lien button a{
@@ -103,7 +103,6 @@ img{
         height: 75px;
         color: white;
         text-align: center;
-        font-size: 2em;
     }
     #record{
         color: white;
@@ -111,7 +110,7 @@ img{
         font-size: 1.3em;
     }
     .container3{
-        margin-top: 3em;
+        margin-top: 2em;
     }
    
 }
@@ -155,6 +154,6 @@ img{
         font-size: 1.3em;
     }
     .container3{
-        margin-top: 3em;
+        margin-top: 2em;
     }
 }
