@@ -158,8 +158,8 @@ function fizzBuzz(choix){
             scores();
             result="INCORRECT"; erreur++;
             if (erreur == 1){document.getElementById('vie1').value=" "}
-            if (erreur == 2){document.getElementById('vie2').innerHTML=" "}
-            if (erreur == 3){document.getElementById('vie3').innerHTML=" "}
+            if (erreur == 2){document.getElementById('vie2').value=" "}
+            if (erreur == 3){document.getElementById('vie3').value=" "}
             
             fin = true;
             
