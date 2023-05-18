@@ -48,7 +48,7 @@
         background-image : url(../image/lesDixMondes/00.jpg);
         background-position: top;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 120%;
     }
     
     #lien{
