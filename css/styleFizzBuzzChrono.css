@@ -23,6 +23,7 @@ img{
 }
 .vies{
     margin-top: 1em;
+    display: flex;
 }
 
 @media (min-width:768px){

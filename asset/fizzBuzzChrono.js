@@ -157,9 +157,9 @@ function fizzBuzz(choix){
         }else {
             scores();
             result="INCORRECT"; erreur++;
-            if (erreur == 1){document.getElementById('heart1').innerHTML=" "}
-            if (erreur == 2){document.getElementById('heart2').innerHTML=" "}
-            if (erreur == 3){document.getElementById('heart3').innerHTML=" "}
+            if (erreur == 1){document.getElementById('vie1').innerHTML=" "}
+            if (erreur == 2){document.getElementById('vie2').innerHTML=" "}
+            if (erreur == 3){document.getElementById('vie3').innerHTML=" "}
             
             fin = true;
             
