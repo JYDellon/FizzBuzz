@@ -111,8 +111,12 @@ function fizzBuzz(choix){
             compteur++;
             scores();
         }else {
+            if (erreur == 1){document.getElementById('vie1').value=" "}
+            if (erreur == 2){document.getElementById('vie2').value=" "}
+            if (erreur == 3){document.getElementById('vie3').value=" "}
             // scores();
             result="INCORRECT"; erreur++;
+
             fin = true;
             
             // if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
@@ -156,11 +160,11 @@ function fizzBuzz(choix){
             scores();
         }else {
             scores();
-            result="INCORRECT"; erreur++;
+            result="INCORRECT"; 
             if (erreur == 1){document.getElementById('vie1').value=" "}
             if (erreur == 2){document.getElementById('vie2').value=" "}
             if (erreur == 3){document.getElementById('vie3').value=" "}
-            
+            erreur++;
             fin = true;
             
             if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
