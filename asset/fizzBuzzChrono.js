@@ -13,6 +13,9 @@ var trouver = new Boolean;
 var fin = new Boolean;
 trouver = false;
 fin = true;
+const text =['A vos marques','Prêt','Partez',' '];
+var a=0;
+var j=0;  
 
 const NbreDeDiviseur = localStorage.getItem('NbreDeDiviseur');
 
@@ -27,18 +30,42 @@ onload=function initialisation1(){
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
     //------------------------
-    var monInterval2 = setInterval(function () {
+    // var monInterval2 = setInterval(function () {
         
-                                                if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
-                                                else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
-                                                else if (s2<=1){document.getElementById('tempo').innerHTML = " ";
-                                                                clearInterval(monInterval2)
-                                                                fin = false;
-                                                                initialisation03()}
-                                                s2--;beep();
-                                            }, 1000);
+    //                                             if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
+    //                                             else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
+    //                                             else if (s2<=1){document.getElementById('tempo').innerHTML = " ";
+    //                                                             clearInterval(monInterval2)
+    //                                                             fin = false;
+    //                                                             initialisation03()}
+    //                                             s2--;beep();
+    //                                         }, 1000);
 
+    myInterval2 = setInterval(afficher,20)
 }
+
+function afficher(){
+
+    document.getElementById('tempo').innerHTML = text[a];
+    console.log(text[a]);
+
+    if (j<50){
+
+        j++;
+        document.getElementById('tempo').style.fontSize = j+"px";
+        
+    }else {
+          
+
+      if (a<3){
+        j=0;  a++;
+      }else{
+        clearInterval(myInterval2); 
+      }
+    
+    }
+}
+
 
 function initialisation2(){
     

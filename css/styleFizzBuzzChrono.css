@@ -18,7 +18,12 @@ body{
     border-radius: 40px;
     width:100%;
 }
-
+img{
+    width: 50px;
+}
+header{
+   
+}
 @media (min-width:768px){
     #lien button a{
         text-decoration: none;
@@ -84,6 +89,7 @@ body{
         font-size: 2em;
     }
     #tempo{
+        height: 75px;
         color: white;
         text-align: center;
         font-size: 2em;
