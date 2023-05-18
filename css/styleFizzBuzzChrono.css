@@ -110,7 +110,7 @@ img{
         top: 200px;
         left: 0px;
         height: 75px;
-        color: white;
+        color: rgb(31, 33, 160);
         text-align: center;
     }
     #record{
@@ -153,7 +153,7 @@ img{
         top: 200px;
         left: 0px;
         height: 75px;
-        color: white;
+        color: rgb(31, 33, 160);
         text-align: center;
         font-size: 2em;
     }
