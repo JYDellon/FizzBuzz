@@ -56,6 +56,7 @@ img{
     text-align: center;
 }
 #resultat, #tempo{
+    margin-top: 1em;
     color: white;
     text-align: center;
     font-size: 3em;
@@ -68,7 +69,7 @@ img{
 }
 
 }
-@media (min-width:501px) and (max-width:767px){
+@media (max-width:767px){
     #lien button a{
         text-decoration: none;
         font-size: 2em;
@@ -91,11 +92,12 @@ img{
     }
     #tempo{
         position: relative;
-        top: 300px;
+        top: 500px;
         left: 0px;
         height: 75px;
-        color: rgb(150, 85, 10);
+        color: white;
         text-align: center;
+        font-size: 2em;
     }
     #record{
         color: white;
@@ -107,43 +109,4 @@ img{
     }
    
     
-}
-@media (max-width:500px){
-    #lien button a{
-        text-decoration: none;
-        font-size: 2em;
-        color: white;
     }
-    .container2{
-        color: white;
-        font-size: 2em;
-        text-align: center;
-    }
-    .centrer{
-        font-size: 2em;
-        text-align: center;
-    }
-    
-    #resultat{
-        color: white;
-        text-align: center;
-        font-size: 2em;
-    }
-    #tempo{
-        position: relative;
-        top: 300px;
-        left: 0px;
-        height: 75px;
-        color: rgb(150, 85, 10);
-        text-align: center;
-    }
-    #record{
-        color: white;
-        text-align: center;
-        font-size: 1.3em;
-    }
-    .container3{
-        margin-top: 3em;
-    }
-   
-}
