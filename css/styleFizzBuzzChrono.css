@@ -70,6 +70,15 @@ img{
     font-size: 1em;
 }
 
+#tempo{
+    position: relative;
+    top: 200px;
+    left: 0px;
+    height: 75px;
+    color: white;
+    text-align: center;
+}
+
 }
 @media (min-width:501px) and (max-width:767px){
     .vies{
@@ -98,7 +107,7 @@ img{
     }
     #tempo{
         position: relative;
-        top: 500px;
+        top: 200px;
         left: 0px;
         height: 75px;
         color: white;
@@ -141,7 +150,7 @@ img{
     }
     #tempo{
         position: relative;
-        top: 500px;
+        top: 200px;
         left: 0px;
         height: 75px;
         color: white;
