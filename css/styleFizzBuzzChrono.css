@@ -21,6 +21,9 @@ body{
 img{
     width: 50px;
 }
+.vies{
+    margin-top: 1em;
+}
 
 @media (min-width:768px){
     #lien button a{

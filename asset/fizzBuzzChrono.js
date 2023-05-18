@@ -125,7 +125,6 @@ function fizzBuzz(choix){
             //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
             //     var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
             //     document.getElementById('record').innerHTML = "Record: " + record;
-
             // }
             
             trouver= true;
@@ -158,6 +157,10 @@ function fizzBuzz(choix){
         }else {
             scores();
             result="INCORRECT"; erreur++;
+            if (erreur == 1){document.getElementById('heart1').innerHTML=" "}
+            if (erreur == 2){document.getElementById('heart2').innerHTML=" "}
+            if (erreur == 3){document.getElementById('heart3').innerHTML=" "}
+            
             fin = true;
             
             if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
