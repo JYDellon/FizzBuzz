@@ -60,7 +60,8 @@ function afficher(){
       if (a<3){
         j=0;  a++;
       }else{
-        clearInterval(myInterval2); 
+        clearInterval(myInterval2);
+        initialisation03() 
       }
     
     }
