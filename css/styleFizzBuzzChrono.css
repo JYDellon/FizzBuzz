@@ -108,7 +108,7 @@ img{
    
     
 }
-@media (min-width:501px){
+@media (max-width:500px){
     #lien button a{
         text-decoration: none;
         font-size: 2em;
