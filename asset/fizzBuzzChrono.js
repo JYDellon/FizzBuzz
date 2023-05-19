@@ -1,4 +1,4 @@
-var erreur = 0;
+var erreur = 0;var cptVies=3;var coins = 0;
 var max=100;
 var nbre = Math.floor(Math.random() * max);
 var tNbre = new Boolean([]);
@@ -15,10 +15,11 @@ trouver = false;
 fin = true;
 const text =['A vos marques','Prêt','Partez',' '];
 var a=0;
-var j=0;  
+var j=0;
 
 const NbreDeDiviseur = localStorage.getItem('NbreDeDiviseur');
-
+document.getElementById('coins').innerHTML = coins;
+document.getElementById('cptVies').innerHTML = cptVies;
 document.getElementById('azerty').innerHTML = nbre;
 var result = "";
     var nbre1=localStorage.getItem('nbre1');
@@ -29,20 +30,12 @@ onload=function initialisation1(){
     record1()
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="white";
-    //------------------------
-    // var monInterval2 = setInterval(function () {
-        
-    //                                             if (s2==2){document.getElementById('tempo').innerHTML = "Prêt";}
-    //                                             else if (s2==1){document.getElementById('tempo').innerHTML = "Partez";} 
-    //                                             else if (s2<=1){document.getElementById('tempo').innerHTML = " ";
-    //                                                             clearInterval(monInterval2)
-    //                                                             fin = false;
-    //                                                             initialisation03()}
-    //                                             s2--;beep();
-    //                                         }, 1000);
-
+  
     myInterval2 = setInterval(afficher,20)
 }
+
+
+    //------------------------
 
 function afficher(){
 
@@ -67,6 +60,8 @@ function afficher(){
     }
 }
 
+
+    //------------------------
 
 function initialisation2(){
     
@@ -112,11 +107,9 @@ function fizzBuzz(choix){
             scores();
         }else {
             erreur++;
-            if (erreur == 1){document.getElementById('vie1').innerHTML=" "}
-            if (erreur == 2){document.getElementById('vie2').innerHTML=" "}
-            if (erreur == 3){document.getElementById('vie3').innerHTML=" "}
-            // scores();
             result="INCORRECT"; 
+            cptVies=3-erreur;
+            document.getElementById('cptVies').innerHTML = cptVies;
             
 
             fin = true;
@@ -163,9 +156,8 @@ function fizzBuzz(choix){
         }else {
             // scores();
             result="INCORRECT"; erreur++;
-            if (erreur == 1){document.getElementById('vie1').innerHTML=" ";}
-            if (erreur == 2){document.getElementById('vie2').innerHTML=" ";}
-            if (erreur == 3){document.getElementById('vie3').innerHTML=" ";}
+            cptVies=3-erreur;
+            document.getElementById('cptVies').innerHTML = cptVies;
             
             fin = true;
             

@@ -1,3 +1,11 @@
+header, .coin{
+    display: flex;
+    justify-content: space-between;
+}
+.coin{
+    display: flex;
+    justify-content:center;
+}
 .bouton:hover{
     background-color: rgb(222, 149, 103);
 }
@@ -131,7 +139,9 @@ img{
     .container3{
         margin-top: 6em;
     }
-   
+    .bouton{
+        border-radius: 40px;
+    }
 }
 @media (max-width:500px){
     body{
@@ -147,6 +157,9 @@ img{
         height: 50px;
         margin-top: 0.75em;
         display: flex;
+    }
+    .coin{
+        margin-top: 0.75em;
     }
     #lien button a{
         text-decoration: none;
