@@ -63,6 +63,12 @@ body{
 
 }
 @media (max-width:767px){
+    body{
+        background-image : url(../image/lesDixMondes/00.jpg);
+        background-position: center;     
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     #lien button a{
         text-decoration: none;
         font-size: 2em;
@@ -95,6 +101,7 @@ body{
     }
     .container3{
         margin-top: 3em;
+        margin-bottom: 15em;
     }
     
     }
