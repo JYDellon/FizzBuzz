@@ -1,3 +1,7 @@
+header, .coin{
+    display: flex;
+    justify-content: space-between;
+}
 .bouton:hover{
     background-color: rgb(222, 149, 103);
 }
@@ -48,19 +52,45 @@ body{
     font-size: 1.3em;
     text-align: center;
 }
-#resultat, #tempo{
+#resultat{
     margin-top: 1em;
     color: white;
     text-align: center;
     font-size: 3em;
 }
-
+#tempo{
+    position: relative;
+    top: 200px;
+    left: 0px;
+    height: 75px;
+    color: rgb(31, 33, 160);
+    text-align: center;
+}
 #record{
     color: white;
     text-align: center;
     font-size: 1em;
 }
 
+.vies{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 50px;
+    margin-top: 0.75em;
+    display: flex;
+}
+.bouton{
+    border-radius: 40px;
+    width: 100px;
+    text-align: center;
+}
+.coin{
+    margin-top: 0.75em;
+}
+img{
+    width: 50px;
+}
 }
 @media (max-width:767px){
     body{
@@ -90,9 +120,12 @@ body{
         font-size: 2em;
     }
     #tempo{
-        color: white;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 75px;
+        color: rgb(31, 33, 160);
         text-align: center;
-        font-size: 2em;
     }
     #record{
         color: white;
@@ -104,4 +137,26 @@ body{
         margin-bottom: 15em;
     }
     
+    .vies{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 50px;
+        margin-top: 0.75em;
+        display: flex;
+    }
+    .bouton{
+        border-radius: 40px;
+        width: 100px;
+        text-align: center;
+    }
+    .coin{
+        margin-top: 0.75em;
+    }
+
+    img{
+        width: 50px;
+    }
+
+
     }

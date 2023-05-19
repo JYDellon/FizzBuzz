@@ -14,7 +14,7 @@ var fin = new Boolean;
 trouver = false;
 fin = true;
 const text =['A vos marques','Prêt','Partez',' '];
-var a=0;
+var a=0;var cptVies=3;var coins = 0;
 var j=0;
 
 const NbreDeDiviseur = localStorage.getItem('NbreDeDiviseur');

@@ -2,7 +2,7 @@ body{
     background-image : url(../image/lesDixMondes/00.jpg);
     background-position: top;     
     background-repeat: no-repeat;
-    background-size: 165%;
+    background-size: cover;
 }
 .container{
     margin-top: 6em;
