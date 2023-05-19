@@ -85,7 +85,7 @@
 @media (max-width:500px){
     body{
         background-image : url(../image/lesDixMondes/00.jpg);
-        background-position: center;     
+        background-position: top;     
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -123,7 +123,8 @@
         text-align: center;
     }
     .container2{
-        margin-top: 2em;
+        margin-top: 5em;
+        margin-bottom: 7em;
     }
 
 }

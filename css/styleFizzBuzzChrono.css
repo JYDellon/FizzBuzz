@@ -5,13 +5,14 @@ header, .coin{
 .coin{
     display: flex;
     justify-content:center;
+    margin-top: 0.75em;
 }
 .bouton:hover{
     background-color: rgb(222, 149, 103);
 }
 body{
     background-image : url(../image/lesDixMondes/00.jpg);
-    background-position: top;     
+    background-position: center;     
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -28,6 +29,12 @@ body{
 }
 img{
     width: 50px;
+}
+
+.bouton{
+    border-radius: 40px;
+    width: 100px;
+    text-align: center;
 }
 
 
@@ -103,12 +110,21 @@ img{
         margin-top: 0.75em;
         display: flex;
     }
+    .bouton{
+        border-radius: 40px;
+        width: 100px;
+        text-align: center;
+    }
+    .coin{
+        margin-top: 0.75em;
+    }
     #lien button a{
         text-decoration: none;
         font-size: 2em;
         color: white;
     }
     .container2{
+        margin-top: 2em;
         color: white;
         font-size: 2em;
         text-align: center;
@@ -148,7 +164,7 @@ img{
         background-image : url(../image/lesDixMondes/00.jpg);
         background-position: top;     
         background-repeat: no-repeat;
-        background-size: 128%;
+        background-size: 140%;
     }
     .vies{
         position: relative;
@@ -196,5 +212,15 @@ img{
     }
     .container3{
         margin-top: 2em;
+    }
+    .container2{
+        color: white;
+        font-size: 2em;
+        text-align: center;
+    }
+    .bouton{
+        border-radius: 40px;
+        width: 100px;
+        text-align: center;
     }
 }
