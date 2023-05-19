@@ -85,9 +85,13 @@ img{
         background-image : url(../image/lesDixMondes/00.jpg);
         background-position: top;     
         background-repeat: no-repeat;
-        background-size: 120%;
+        background-size: cover;
     }
     .vies{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 50px;
         margin-top: 0.75em;
         display: flex;
     }
@@ -130,7 +134,17 @@ img{
    
 }
 @media (max-width:500px){
+    body{
+        background-image : url(../image/lesDixMondes/00.jpg);
+        background-position: top;     
+        background-repeat: no-repeat;
+        background-size: 128%;
+    }
     .vies{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: 50px;
         margin-top: 0.75em;
         display: flex;
     }
@@ -161,7 +175,6 @@ img{
         height: 75px;
         color: rgb(31, 33, 160);
         text-align: center;
-        font-size: 2em;
     }
     #record{
         color: white;
