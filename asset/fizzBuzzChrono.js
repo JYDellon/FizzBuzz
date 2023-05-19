@@ -113,19 +113,19 @@ function fizzBuzz(choix){
             
 
             fin = true;
-            
-            // if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+            if (cptVies==0){
+            if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
                 
-            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-            //     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
 
-            // }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
+            }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
                 
-            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-            //     var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
-            //     document.getElementById('record').innerHTML = "Record: " + record;
-            // }
-            
+                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+                document.getElementById('record').innerHTML = "Record: " + record;
+            }
+            }
             trouver= true;
         }
 
@@ -160,20 +160,20 @@ function fizzBuzz(choix){
             document.getElementById('cptVies').innerHTML = cptVies;
             
             fin = true;
-            
-            // if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+            if (cptVies==0){
+                if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+                    
+                    localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+    
+                }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
+                    
+                    localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
+                    var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
+                    document.getElementById('record').innerHTML = "Record: " + record;
+                }
+                }
                 
-            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-            //     document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2);
-
-            // }else if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) < compteur){
-                
-            //     localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-            //     var record = localStorage.getItem('ompteurChrono'+nbre1+nbre2);
-            //     document.getElementById('record').innerHTML = "Record: " + record;
-
-            // }
-            
             trouver= true;
         }
 
