@@ -114,17 +114,18 @@ function fizzBuzz(choix){
 
             fin = true;
             if (cptVies==0){
-            if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
-                
-                localStorage.setItem('compteurChrono2'+nbre1+nbre2,compteur);
-                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono2'+nbre1+nbre2);
+                if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
+                    
+                    localStorage.setItem('compteurChrono2'+nbre1+nbre2,compteur);
+                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono2'+nbre1+nbre2);
 
-            }else if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) < compteur){
-                
-                localStorage.setItem('compteurChrono2'+nbre1+nbre2,compteur);
-                var record = localStorage.getItem('compteurChrono2'+nbre1+nbre2);
-                document.getElementById('record').innerHTML = "Record: " + record;
-            }
+                }else if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) < compteur){
+                    
+                    localStorage.setItem('compteurChrono2'+nbre1+nbre2,compteur);
+                    var record = localStorage.getItem('compteurChrono2'+nbre1+nbre2);
+                    document.getElementById('record').innerHTML = "Record: " + record;
+
+                }
             }
             trouver= true;
         }
@@ -162,18 +163,18 @@ function fizzBuzz(choix){
             fin = true;
             if (cptVies==0){
 
-            if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
-                
-                localStorage.setItem('compteurChrono'+nbre1+nbre2,compteur);
-                document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono'+nbre1+nbre2);
+                if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+                    
+                    localStorage.setItem('compteurChrono'+nbre1+nbre2,compteur);
+                    document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono'+nbre1+nbre2);
 
-            }else if (localStorage.getItem('compteurChrono'+nbre1+nbre2) < compteur){
-                
-                localStorage.setItem('ompteurChrono'+nbre1+nbre2,compteur);
-                var record = localStorage.getItem('compteurChrono'+nbre1+nbre2);
-                document.getElementById('record').innerHTML = "Record: " + record;
+                }else if (localStorage.getItem('compteurChrono'+nbre1+nbre2) < compteur){
+                    
+                    localStorage.setItem('compteurChrono'+nbre1+nbre2,compteur);
+                    var record = localStorage.getItem('compteurChrono'+nbre1+nbre2);
+                    document.getElementById('record').innerHTML = "Record: " + record;
 
-            }
+                }
             }
             trouver= true;
         }
@@ -193,13 +194,24 @@ function fizzBuzz(choix){
     }
 }
 function record1(){
-    if (localStorage.getItem('ompteurChrono'+nbre1+nbre2) == null ){
-    
-        localStorage.setItem('ompteurChrono'+nbre1+nbre2,0);
-        document.getElementById('record').innerHTML = "Record: " + 0;
-    
-    }else{
-        document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('ompteurChrono'+nbre1+nbre2)
+    if (NbreDeDiviseur==1){
+        if (localStorage.getItem('compteurChrono'+nbre1+nbre2) == null ){
+        
+            localStorage.setItem('compteurChrono'+nbre1+nbre2,0);
+            document.getElementById('record').innerHTML = "Record: " + 0;
+        
+        }else{
+            document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono'+nbre1+nbre2)
+        }
+    }else if (NbreDeDiviseur==2){
+        if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
+        
+            localStorage.setItem('compteurChrono2'+nbre1+nbre2,0);
+            document.getElementById('record').innerHTML = "Record: " + 0;
+        
+        }else{
+            document.getElementById('record').innerHTML = "Record: " + localStorage.getItem('compteurChrono2'+nbre1+nbre2)
+        }
     }
 }
 //-----------------------------------------------------------------------------------------------------------
