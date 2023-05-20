@@ -20,6 +20,8 @@ var j=0;
 document.getElementById('coins').innerHTML = coins;
 document.getElementById('cptVies').innerHTML = cptVies;
 document.getElementById('azerty').innerHTML = nbre;
+
+
 var result = "";
 
 
@@ -31,13 +33,18 @@ var nbre2=3;
 var fizz=3;
 var buzz=3;
 var fb=3;
+document.getElementById('fizz').innerHTML = "fizz: "+ fizz + "---";
+document.getElementById('buzz').innerHTML =  "buzz: "+ buzz + "---";
+document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
+
+
 
 //-----------------------------------------------
 
 
 var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
-document.getElementById("card").style.top = "250px";
+document.getElementById("card").style.top = "50px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
 
@@ -316,11 +323,16 @@ function fizzBuzz(choix){
             fin = true;
         }
     }
+//----------------------------------objectifs--------------------------------------    
     
 console.log(fizz+' '+buzz+' '+fb);
     if (fizz+buzz+fb == 0){k=-50;k=0;
-        window.onload=timer1();
+        code();fin == true;
     }
+    document.getElementById('fizz').innerHTML = "fizz: "+ fizz + "---";
+document.getElementById('buzz').innerHTML =  "buzz: "+ buzz + "---";
+document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
+//--------------------------------------------------------------------------------
 }
 function code(){
     alert(" Alert inside code function Window.onload");
