@@ -256,13 +256,13 @@ console.log(fizz+' '+buzz+' '+fb);
     if (fizz+buzz+fb == 0){k=-50;k=0;
         code();fin == true;
     }
-    document.getElementById('fizz').innerHTML = "fizz: "+ fizz + "---";
-document.getElementById('buzz').innerHTML =  "buzz: "+ buzz + "---";
+    document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
+document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
 //--------------------------------------------------------------------------------
 }
 function code(){
-    alert(" Alert inside code function Window.onload");
+    alert("BRAVO");
     }
 function record1(){
         if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
