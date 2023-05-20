@@ -36,7 +36,7 @@ var fb=3;
 document.getElementById('fizz').innerHTML = "fizz: "+ fizz + "---";
 document.getElementById('buzz').innerHTML =  "buzz: "+ buzz + "---";
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
-
+var marge=screen.width-document.getElementById("card").offsetWidth
 
 
 //-----------------------------------------------
@@ -49,6 +49,10 @@ document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
 
 onload = function timer(){
+    console.log(screen.width);
+    console.log(document.getElementById("card").offsetWidth);
+    
+    console.log(marge);
     timer1()
     
 
@@ -61,10 +65,10 @@ function timer1(){
 if (window.matchMedia("(max-width: 500px)").matches){
     function deplacement(){
     
-        if (k<15){
+        if (k<(marge/2)){
     
             k++;
-            document.getElementById("card").style.left = 6*k+"px";
+            document.getElementById("card").style.left = k+"px";
             
         }else {
                 clearInterval(myinterval);
@@ -114,10 +118,10 @@ if (window.matchMedia("(max-width: 500px)").matches){
 if (window.matchMedia("(min-width: 501px) and (max-width: 767px)").matches){
 function deplacement(){
 
-    if (k<15){
+    if (k<(marge/2)){
 
         k++;
-        document.getElementById("card").style.left = 7*k+"px";
+        document.getElementById("card").style.left = k+"px";
         
     }else {
             clearInterval(myinterval);
