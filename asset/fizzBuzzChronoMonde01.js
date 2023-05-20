@@ -49,7 +49,7 @@ var marge=screen.width-document.getElementById("card").offsetWidth
 
 var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
-document.getElementById("card").style.top = "50px";
+document.getElementById("card").style.top = "0px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
 
@@ -76,6 +76,10 @@ onload = function timer(){
 }
 function timer1(){
     fizz=3; buzz=3; fb=3;
+    for(let i=0;i<max;i++){
+        tNbre[max]=false;
+    }
+    document.getElementById('title').innerHTML="Fizz = " + nbre1 + " Buzz = " + nbre2;
     myinterval=setInterval(deplacement,1);
 }
 
