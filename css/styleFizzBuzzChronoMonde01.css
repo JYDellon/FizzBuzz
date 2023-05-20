@@ -4,7 +4,7 @@ header, .coin{
 }
 .objectifs{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 .coin{
     display: flex;
@@ -147,8 +147,9 @@ img{
         text-align: center;
     }
     
+    
     #resultat{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 2em;
     }
@@ -161,7 +162,7 @@ img{
         text-align: center;
     }
     #record{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 1.3em;
     }

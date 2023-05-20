@@ -33,9 +33,13 @@ var nbre2=3;
 var fizz=3;
 var buzz=3;
 var fb=3;
-document.getElementById('fizz').innerHTML = "fizz: "+ fizz + "---";
-document.getElementById('buzz').innerHTML =  "buzz: "+ buzz + "---";
+document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
+document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
+document.getElementById('fizz').style.fontSize="45px";
+document.getElementById('buzz').style.fontSize="45px";
+document.getElementById('fb').style.fontSize="45px";
+
 var marge=screen.width-document.getElementById("card").offsetWidth
 
 
@@ -62,12 +66,12 @@ function timer1(){
 }
 
 //--------------------------------------
-if (window.matchMedia("(max-width: 500px)").matches){
+
     function deplacement(){
     
         if (k<(marge/2)){
     
-            k++;
+            k=k+6;
             document.getElementById("card").style.left = k+"px";
             
         }else {
@@ -93,8 +97,8 @@ if (window.matchMedia("(max-width: 500px)").matches){
     
     
     function timer2(){
-            k=0; console.log(k);
-            doudou=setInterval(deplacement2,1);
+            k=0;
+            doudou=setInterval(deplacement2,40);
     
     }
     
@@ -113,60 +117,9 @@ if (window.matchMedia("(max-width: 500px)").matches){
     
     
     
-}
+
 //--------------------------------------
-if (window.matchMedia("(min-width: 501px) and (max-width: 767px)").matches){
-function deplacement(){
 
-    if (k<(marge/2)){
-
-        k++;
-        document.getElementById("card").style.left = k+"px";
-        
-    }else {
-            clearInterval(myinterval);
-            timer3();
-    }
-}
-
-function timer3(){
-
-    az=setInterval(et,250);
-   
-}
-function et(){
-    if (h<10){
-        h++
-    }else{
-        clearInterval(az);
-        timer2();
-    }
-
-}
-
-
-function timer2(){
-        k=0; console.log(k);
-        doudou=setInterval(deplacement2,1);
-
-}
-
-function deplacement2(){
-
-    if (k<40){
-       
-        k++;
-        document.getElementById("card").style.left = 225+55*k+"px";
-        
-    }else {
-            clearInterval( doudou);
-            initialisation1();
-    }
-}
-
-
-
-}
 
 
 
@@ -194,7 +147,7 @@ function initialisation1(){
   
     record1()
     document.getElementById('nbr').innerHTML = nbre;
-    document.getElementById('nbr').style.color="white";
+    document.getElementById('nbr').style.color="black";
   
     myInterval2 = setInterval(afficher,20)
 }
