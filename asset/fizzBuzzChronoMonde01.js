@@ -38,10 +38,14 @@ var buzz=3;
 var fb=3;
 document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
 document.getElementById('fizz').style.fontSize="25px";
+document.getElementById('fizz').style.fontWeight="bold";
+
 document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('buzz').style.fontSize="25px";
+document.getElementById('buzz').style.fontWeight="bold";
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
 document.getElementById('fb').style.fontSize="25px";
+document.getElementById('fb').style.fontWeight="bold";
 
 var marge=(screen.width)-(document.getElementById("card").offsetWidth)
 
@@ -79,7 +83,12 @@ onload = function timer(){
 
 }
 function timer1(){
-    fizz=3; buzz=3; fb=3;
+    if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
+        fizz=3; buzz=3; fb=1;
+    }else{
+        fizz=3; buzz=3; fb=3;
+    }
+    
     for(let i=0;i<max;i++){
         tNbre[max]=false;
     }
@@ -278,8 +287,8 @@ function fizzBuzz(choix){
         niveauTermine();
     }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
-document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
-document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
+    document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
+    document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
 //--------------------------------------------------------------------------------
 }
 function niveauTermine(){
