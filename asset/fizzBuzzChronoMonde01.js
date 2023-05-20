@@ -1,3 +1,4 @@
+localStorage.clear();
 var tablo=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
 var indiceI=0;
 var erreur = 0;var cptVies=3;var coins = 0;
@@ -75,14 +76,11 @@ function affectationDesFiizBuzz(){
 onload = function timer(){
     
     affectationDesFiizBuzz();
-    // console.log(screen.width);
-    // console.log(document.getElementById("card").offsetWidth);
-    // console.log(marge);
-
     timer1()
 
 }
 function timer1(){
+    
     if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
         fizz=3; buzz=3; fb=1;
     }else{
