@@ -260,7 +260,7 @@ function fizzBuzz(choix){
 
         if (result == "CORRECT"){
             if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                document.getElementById('resultat').style.color="white";
+                                document.getElementById('resultat').style.color="black";
             }
             
             initialisation2()
@@ -313,9 +313,9 @@ function beep(){
 //-----------------------------------------------------------------------------------------------------------
 function scores(){
     if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
-                                    document.getElementById('resultat').style.color="white";
+                                    document.getElementById('resultat').style.color="black";
     }else{
         document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
-        document.getElementById('resultat').style.color="white";}
+        document.getElementById('resultat').style.color="black";}
 }
 //-----------------------------------------------------------------------------------------------------------
