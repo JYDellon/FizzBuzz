@@ -1,3 +1,6 @@
+.textcard{
+    font-size: 28px;
+}
 header, .coin{
     display: flex;
     justify-content: space-between;

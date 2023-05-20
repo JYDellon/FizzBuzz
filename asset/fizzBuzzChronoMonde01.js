@@ -49,7 +49,7 @@ var marge=screen.width-document.getElementById("card").offsetWidth
 
 var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
-document.getElementById("card").style.top = "0px";
+document.getElementById("card").style.top = "100px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
 
