@@ -1,4 +1,4 @@
-localStorage.clear();
+
 var tablo=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
 var indiceI=0;
 var erreur = 0;var cptVies=3;var coins = 0;
