@@ -30,7 +30,10 @@ img{
     width: 50px;
 }
 
-
+#cptVies{
+    color: black;
+    font-size: 20px;
+}
 
 
 @media (min-width:768px){
