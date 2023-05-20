@@ -1,3 +1,5 @@
+var tablo=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
+var indiceI=0;
 var erreur = 0;var cptVies=3;var coins = 0;
 var max=100;
 var nbre = Math.floor(Math.random() * max);
@@ -20,7 +22,8 @@ var j=0;
 document.getElementById('coins').innerHTML = coins;
 document.getElementById('cptVies').innerHTML = cptVies;
 document.getElementById('azerty').innerHTML = nbre;
-
+document.getElementById('nbr').innerHTML = nbre;
+    document.getElementById('nbr').style.color="black";
 
 var result = "";
 
@@ -28,8 +31,8 @@ var result = "";
 //-----------------------------------------------
 
 
-var nbre1=2;
-var nbre2=3;
+var nbre1=0;
+var nbre2=0;
 var fizz=3;
 var buzz=3;
 var fb=3;
@@ -50,15 +53,29 @@ document.getElementById("card").style.top = "50px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
 
-onload = function timer(){
-    console.log(screen.width);
-    console.log(document.getElementById("card").offsetWidth);
+
+
+function affectationDesFiizBuzz(){
     
-    console.log(marge);
+    nbre1=tablo[indiceI][0];
+    nbre2=tablo[indiceI][1];
+    console.log("nbre1 ; "+ nbre1);
+    console.log("nbre2 ; "+ nbre2);
+     
+}
+
+onload = function timer(){
+    
+    affectationDesFiizBuzz();
+    // console.log(screen.width);
+    // console.log(document.getElementById("card").offsetWidth);
+    // console.log(marge);
+
     timer1()
 
 }
 function timer1(){
+    fizz=3; buzz=3; fb=3;
     myinterval=setInterval(deplacement,1);
 }
 
@@ -116,8 +133,8 @@ function timer1(){
 function initialisation1(){
   
     record1()
-    document.getElementById('nbr').innerHTML = nbre;
-    document.getElementById('nbr').style.color="black";
+    // document.getElementById('nbr').innerHTML = nbre;
+    // document.getElementById('nbr').style.color="black";
   
     myInterval2 = setInterval(afficher,20)
 }
@@ -252,18 +269,26 @@ function fizzBuzz(choix){
     }
 //----------------------------------objectifs--------------------------------------    
     
-console.log(fizz+' '+buzz+' '+fb);
+
     if (fizz+buzz+fb == 0){k=-50;k=0;
-        code();fin == true;
+        niveauTermine();
     }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
 document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
 //--------------------------------------------------------------------------------
 }
-function code(){
-    alert("BRAVO");
+function niveauTermine(){
+    if (indiceI<10){
+    indiceI=indiceI+1;
+    alert('niveau '+indiceI +' terminé');
+    h=0;k=-50;
+    affectationDesFiizBuzz();
+    timer1();
+    }else {
+        alert('monde 02 DEBLOQUE')
     }
+}
 function record1(){
         if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
         
