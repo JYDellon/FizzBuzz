@@ -160,7 +160,7 @@ function initialisation2(){
     // }else{tNbre[nbre]=true}
     //------------------------------------------------------------
     document.getElementById('nbr').innerHTML = nbre;
-    document.getElementById('nbr').style.color="white";
+    document.getElementById('nbr').style.color="black";
     document.getElementById('azerty').innerHTML = nbre;
     
 }
