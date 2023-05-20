@@ -17,13 +17,13 @@ trouver = false;
 const text =['A vos marques','Prêt','Partez',' '];
 var a=0;var cptVies=3;var coins = 0;
 var j=0;
-
+var mondeUnNiveau=1;
 
 document.getElementById('coins').innerHTML = coins;
 document.getElementById('cptVies').innerHTML = cptVies;
 document.getElementById('azerty').innerHTML = nbre;
 document.getElementById('nbr').innerHTML = nbre;
-    document.getElementById('nbr').style.color="black";
+document.getElementById('nbr').style.color="black";
 
 var result = "";
 
@@ -52,7 +52,11 @@ document.getElementById("card").style.position="fixed";
 document.getElementById("card").style.top = "100px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
-
+if (localStorage.getItem('mondeUnNiveau') == null){
+    localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+}else{
+    mondeUnNiveau=localStorage.getItem('mondeUnNiveau');
+}
 
 
 function affectationDesFiizBuzz(){
@@ -284,7 +288,7 @@ document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
 }
 function niveauTermine(){
     if (indiceI<10){
-    indiceI=indiceI+1;
+    indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
     alert('niveau '+indiceI +' terminé');
     h=0;k=-50;
     affectationDesFiizBuzz();
