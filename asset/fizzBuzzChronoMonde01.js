@@ -129,7 +129,7 @@ function timer1(){
         if (k<40){
            
             k++;
-            document.getElementById("card").style.left = 410+55*k+"px";
+            document.getElementById("card").style.left = 50+55*k+"px";
             
         }else {
                 clearInterval( doudou);
