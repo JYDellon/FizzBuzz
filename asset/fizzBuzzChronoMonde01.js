@@ -52,19 +52,18 @@ document.getElementById("card").style.position="fixed";
 document.getElementById("card").style.top = "100px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="50px";
-if (localStorage.getItem('mondeUnNiveau') == null){
-    localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
-}else{
-    mondeUnNiveau=localStorage.getItem('mondeUnNiveau');
-}
+
 
 
 function affectationDesFiizBuzz(){
-    
+    if (localStorage.getItem('mondeUnNiveau') == null){
+        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+    }else{
+        mondeUnNiveau=localStorage.getItem('mondeUnNiveau');
+        indiceI=mondeUnNiveau-1;
+    }
     nbre1=tablo[indiceI][0];
     nbre2=tablo[indiceI][1];
-    console.log("nbre1 ; "+ nbre1);
-    console.log("nbre2 ; "+ nbre2);
      
 }
 
@@ -86,6 +85,7 @@ function timer1(){
     document.getElementById('title').innerHTML="Fizz = " + nbre1 + " Buzz = " + nbre2;
     myinterval=setInterval(deplacement,1);
 }
+
 
 //--------------------------------------
 
@@ -187,7 +187,6 @@ function initialisation2(){
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="black";
     document.getElementById('azerty').innerHTML = nbre;
-    
 }
 
 function fizzBuzz(choix){
