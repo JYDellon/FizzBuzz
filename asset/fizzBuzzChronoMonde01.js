@@ -36,15 +36,13 @@ var fb=3;
 document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
 document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
-document.getElementById('fizz').style.fontSize="45px";
-document.getElementById('buzz').style.fontSize="45px";
-document.getElementById('fb').style.fontSize="45px";
+document.getElementById('fizz').style.fontSize="25px";
+document.getElementById('buzz').style.fontSize="25px";
+document.getElementById('fb').style.fontSize="25px";
 
 var marge=screen.width-document.getElementById("card").offsetWidth
 
-
 //-----------------------------------------------
-
 
 var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
@@ -58,7 +56,6 @@ onload = function timer(){
     
     console.log(marge);
     timer1()
-    
 
 }
 function timer1(){
@@ -94,8 +91,7 @@ function timer1(){
         }
     
     }
-    
-    
+        
     function timer2(){
             k=0;
             doudou=setInterval(deplacement2,40);
@@ -114,35 +110,9 @@ function timer1(){
                 initialisation1();
         }
     }
-    
-    
-    
-
-//--------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //-------------------------------------------------
 
-
-    
 function initialisation1(){
   
     record1()
