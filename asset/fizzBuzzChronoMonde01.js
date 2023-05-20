@@ -155,9 +155,9 @@ function initialisation2(){
     
     nbre = Math.floor(Math.random() * max);
     //-------gestion de la répétition des numéros-----------------
-    // if (tNbre[nbre]==true){
-    //     initialisation2();
-    // }else{tNbre[nbre]=true}
+    if (tNbre[nbre]==true){
+        initialisation2();
+    }else{tNbre[nbre]=true}
     //------------------------------------------------------------
     document.getElementById('nbr').innerHTML = nbre;
     document.getElementById('nbr').style.color="black";
