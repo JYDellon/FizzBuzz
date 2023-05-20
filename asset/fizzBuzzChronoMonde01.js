@@ -37,13 +37,13 @@ var fizz=3;
 var buzz=3;
 var fb=3;
 document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
-document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
-document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb ;
 document.getElementById('fizz').style.fontSize="25px";
+document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
 document.getElementById('buzz').style.fontSize="25px";
+document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
 document.getElementById('fb').style.fontSize="25px";
 
-var marge=screen.width-document.getElementById("card").offsetWidth
+var marge=(screen.width)-(document.getElementById("card").offsetWidth)
 
 //-----------------------------------------------
 
@@ -51,7 +51,7 @@ var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
 document.getElementById("card").style.top = "100px";
 document.getElementById("card").style.left = "-50px";
-document.getElementById("card").style.fontSize="50px";
+document.getElementById("card").style.fontSize="5px";
 
 
 
@@ -129,7 +129,7 @@ function timer1(){
         if (k<40){
            
             k++;
-            document.getElementById("card").style.left = 225+55*k+"px";
+            document.getElementById("card").style.left = 410+55*k+"px";
             
         }else {
                 clearInterval( doudou);
