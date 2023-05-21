@@ -1,5 +1,7 @@
 
-var tablo=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
+var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
+var quantiteDeNbre1EtNbre2ParMonde=[[5,5,2,2,2],[10,8,4,3,2],[15,10,6,4,3],[20,13,8,5,4],[25,16,10,7,5],[30,18,12,9,6],[35,20,14,11,7],[40,23,16,12,8],[45,27,18,13,9],[50,33,20,14,9]];
+var quantiteDeFizzBuzzParNiveauEtParMonde=[[2,1,1,1,1,1,1,1,1,1],[4,2,2,1,1,1,1,1,1,1],[6,3,2,2,2,2,2,1,1,1],[8,4,3,2,3,2,2,1,1,1],[10,5,4,3,3,2,2,1,1,1],[12,6,4,3,4,3,3,2,1,1],[14,7,5,4,5,3,3,2,2,2],[16,8,6,4,5,4,3,2,2,2],[17,9,7,5,6,4,4,3,2,2],[17,11,8,5,7,5,4,3,2,2]];
 var indiceI=0;
 var erreur = 0;var cptVies=3;var coins = 0;
 var max=100;
@@ -31,12 +33,12 @@ var result = "";
 
 //-----------------------------------------------
 
-
+var monde=1;
 var nbre1=0;
 var nbre2=0;
-var fizz=3;
-var buzz=3;
-var fb=3;
+var fizz=0;
+var buzz=0;
+var fb=0;
 
 
 var marge=(screen.width)-(document.getElementById("card").offsetWidth)
@@ -49,7 +51,16 @@ document.getElementById("card").style.top = "100px";
 document.getElementById("card").style.left = "-50px";
 document.getElementById("card").style.fontSize="5px";
 
+//--------------------------------------------------------------------------------------------------------------
 
+onload = function timer(){
+    
+    affectationDesFiizBuzz();
+    
+
+}
+
+//--------------------------------------------------------------------------------------------------------------
 
 function affectationDesFiizBuzz(){
     
@@ -63,24 +74,45 @@ function affectationDesFiizBuzz(){
     console.log("mondeUnNiveau "+mondeUnNiveau);
     console.log("indiceI "+indiceI);
 
-    nbre1=tablo[indiceI][0];
-    nbre2=tablo[indiceI][1];
+    nbre1=coupleNbre1Nbre2[indiceI][0];
+    nbre2=coupleNbre1Nbre2[indiceI][1];
      
-}
+    //Gestion de la quanité de fizz par nombre---------------------------
+    if (nbre1==2){
+        fizz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][0]
+    }else if  (nbre1==3){
+        fizz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][1]
+    }else if  (nbre1==5){
+        fizz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][2]
+    }else if  (nbre1==7){
+        fizz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][3]
+    }
+    //-------------------------------------------------------------------
+    //Gestion de la quantité de buzz par nombre--------------------------
+    if (nbre2==3){
+        buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][1]
+    }else if  (nbre2==5){
+        buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][2]
+    }else if  (nbre2==7){
+        buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][3]
+    }else if  (nbre2==11){
+        buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][4]
+    }
+    //-------------------------------------------------------------------
+    fb = quantiteDeFizzBuzzParNiveauEtParMonde[monde-1][indiceI]
 
-onload = function timer(){
-    
-    affectationDesFiizBuzz();
     timer1()
-
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
 function timer1(){
     
-    if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
-        fizz=3; buzz=3; fb=2;
-    }else{
-        fizz=3; buzz=3; fb=3;
-    }
+
+
+    // if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
+    //     fb=2;
+    // }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
     document.getElementById('fizz').style.fontSize="25px";
     document.getElementById('fizz').style.fontWeight="bold";
@@ -99,7 +131,7 @@ function timer1(){
 }
 
 
-//--------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
     function deplacement(){
     
@@ -114,11 +146,16 @@ function timer1(){
         }
     }
     
+//--------------------------------------------------------------------------------------------------------------
+
     function timer3(){
     
         az=setInterval(et,250);
        
     }
+
+//--------------------------------------------------------------------------------------------------------------
+
     function et(){
         if (h<10){
             h++
@@ -128,13 +165,17 @@ function timer1(){
         }
     
     }
-        
+      
+//--------------------------------------------------------------------------------------------------------------    
+
     function timer2(){
             k=0;
             doudou=setInterval(deplacement2,40);
     
     }
     
+//--------------------------------------------------------------------------------------------------------------
+
     function deplacement2(){
     
         if (k<40){
@@ -148,7 +189,7 @@ function timer1(){
         }
     }
 
-//-------------------------------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 function initialisation1(){
   
@@ -156,8 +197,7 @@ function initialisation1(){
     myInterval2 = setInterval(afficher,20)
 }
 
-
-    //------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 function afficher(){
 
@@ -180,8 +220,7 @@ function afficher(){
     }
 }
 
-
-    //------------------------
+//--------------------------------------------------------------------------------------------------------------
 
 function initialisation2(){
     
@@ -208,6 +247,7 @@ function initialisation2(){
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------------------------------------------------
 function fizzBuzz(choix){
         
     if (fin == false){
@@ -291,8 +331,11 @@ function fizzBuzz(choix){
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
     document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
     document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
-//--------------------------------------------------------------------------------
+//------------------------------------------
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
 function niveauTermine(){
     if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
@@ -304,6 +347,9 @@ function niveauTermine(){
         mondeSuivant();
     }
 }
+
+//--------------------------------------------------------------------------------------------------------------
+
 function record1(){
         if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
         
@@ -315,6 +361,7 @@ function record1(){
         }
     
 }
+
 //-----------------------------------------------------------------------------------------------------------
 function beep(){
     let audio = new Audio("https://www.soundjay.com/buttons/sounds/beep-28.mp3");
@@ -322,6 +369,7 @@ function beep(){
 }
 
 //-----------------------------------------------------------------------------------------------------------
+
 function scores(){
     if (compteur == 1){document.getElementById('resultat').innerHTML = compteur + " bonne réponse";            
                                     document.getElementById('resultat').style.color="black";
@@ -329,7 +377,10 @@ function scores(){
         document.getElementById('resultat').innerHTML = compteur + " bonnes réponses";            
         document.getElementById('resultat').style.color="black";}
 }
-//-----------------------------------------------------------------------------------------------------------
-function mondeSuivant(){
 
+//-----------------------------------------------------------------------------------------------------------
+
+function mondeSuivant(){
+    monde++;mondeUnNiveau=1;
+    affectationDesFiizBuzz();
 }
