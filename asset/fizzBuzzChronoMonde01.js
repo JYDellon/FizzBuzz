@@ -37,16 +37,7 @@ var nbre2=0;
 var fizz=3;
 var buzz=3;
 var fb=3;
-document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
-document.getElementById('fizz').style.fontSize="25px";
-document.getElementById('fizz').style.fontWeight="bold";
 
-document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
-document.getElementById('buzz').style.fontSize="25px";
-document.getElementById('buzz').style.fontWeight="bold";
-document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
-document.getElementById('fb').style.fontSize="25px";
-document.getElementById('fb').style.fontWeight="bold";
 
 var marge=(screen.width)-(document.getElementById("card").offsetWidth)
 
@@ -61,13 +52,17 @@ document.getElementById("card").style.fontSize="5px";
 
 
 function affectationDesFiizBuzz(){
-    compteur=0;
+    compteur=0;console.log("mondeUnNiveau "+mondeUnNiveau);// a effacer dès que le changement de monde sera OK
+    localStorage.setItem('mondeUnNiveau',10);
     if (localStorage.getItem('mondeUnNiveau') == null){
         localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
     }else{
         mondeUnNiveau=localStorage.getItem('mondeUnNiveau');
         indiceI=mondeUnNiveau-1;
     }
+    console.log("mondeUnNiveau "+mondeUnNiveau);
+    console.log("indiceI "+indiceI);
+
     nbre1=tablo[indiceI][0];
     nbre2=tablo[indiceI][1];
      
@@ -82,11 +77,20 @@ onload = function timer(){
 function timer1(){
     
     if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
-        fizz=3; buzz=3; fb=1;
+        fizz=3; buzz=3; fb=2;
     }else{
         fizz=3; buzz=3; fb=3;
     }
-    
+    document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
+    document.getElementById('fizz').style.fontSize="25px";
+    document.getElementById('fizz').style.fontWeight="bold";
+    document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
+    document.getElementById('buzz').style.fontSize="25px";
+    document.getElementById('buzz').style.fontWeight="bold";
+    document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
+    document.getElementById('fb').style.fontSize="25px";
+    document.getElementById('fb').style.fontWeight="bold";
+
     for(let i=0;i<max;i++){
         tNbre[max]=false;
     }
@@ -290,14 +294,14 @@ function fizzBuzz(choix){
 //--------------------------------------------------------------------------------
 }
 function niveauTermine(){
-    if (indiceI<10){
+    if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
         alert('niveau '+indiceI +' terminé');
         h=0;k=-50;
         affectationDesFiizBuzz();
         timer1();
     }else {
-        window.location.href='https://jydellon.github.io/FizzBuzz/html/menuMonde02.html'
+        mondeSuivant();
     }
 }
 function record1(){
@@ -326,3 +330,6 @@ function scores(){
         document.getElementById('resultat').style.color="black";}
 }
 //-----------------------------------------------------------------------------------------------------------
+function mondeSuivant(){
+
+}
