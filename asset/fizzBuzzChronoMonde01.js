@@ -291,13 +291,13 @@ function fizzBuzz(choix){
 }
 function niveauTermine(){
     if (indiceI<10){
-    indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
-    alert('niveau '+indiceI +' terminé');
-    h=0;k=-50;
-    affectationDesFiizBuzz();
-    timer1();
+        indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+        alert('niveau '+indiceI +' terminé');
+        h=0;k=-50;
+        affectationDesFiizBuzz();
+        timer1();
     }else {
-        alert('monde 02 DEBLOQUE')
+        window.location.href='https://jydellon.github.io/FizzBuzz/html/menuMonde02.html'
     }
 }
 function record1(){
