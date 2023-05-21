@@ -1,9 +1,9 @@
 
 var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
-var quantiteDeNbre1EtNbre2ParMonde=[[5,5,2,2,2],[10,8,4,3,2],[15,10,6,4,3],[20,13,8,5,4],[25,16,10,7,5],[30,18,12,9,6],[35,20,14,11,7],[40,23,16,12,8],[45,27,18,13,9],[50,33,20,14,9]];
+var quantiteDeNbre1EtNbre2ParMonde=[[5,5,2,2,2],[10,8,4,3,2],[15,10,6,4,3],[20,13,8,5,4],[25,16,10,7,5],[30,18,12,9,6],[35,20,14,11,7],[40,23,16,12,8],[45,27,18,13,9],[50,33,20,13,8]];
 var quantiteDeFizzBuzzParNiveauEtParMonde=[[2,1,1,1,1,1,1,1,1,1],[4,2,2,1,1,1,1,1,1,1],[6,3,2,2,2,2,2,1,1,1],[8,4,3,2,3,2,2,1,1,1],[10,5,4,3,3,2,2,1,1,1],[12,6,4,3,4,3,3,2,1,1],[14,7,5,4,5,3,3,2,2,2],[16,8,6,4,5,4,3,2,2,2],[17,9,7,5,6,4,4,3,2,2],[17,11,8,5,7,5,4,3,2,2]];
 var indiceI=0;
-var erreur = 0;var cptVies=3;var coins = 0;
+var erreur = 0;var coins = 0;
 var max=100;
 var nbre = Math.floor(Math.random() * max);
 var tNbre = new Boolean([]);
@@ -20,7 +20,7 @@ trouver = false;
 const text =['A vos marques','Prêt','Partez',' '];
 var a=0;var cptVies=3;var coins = 0;
 var j=0;
-var mondeUnNiveau=1;
+var mondeUnNiveau;
 
 document.getElementById('coins').innerHTML = coins;
 document.getElementById('cptVies').innerHTML = cptVies;
@@ -33,7 +33,7 @@ var result = "";
 
 //-----------------------------------------------
 
-var monde=1;
+var monde;
 var nbre1=0;
 var nbre2=0;
 var fizz=0;
@@ -63,10 +63,8 @@ onload = function timer(){
 //--------------------------------------------------------------------------------------------------------------
 
 function affectationDesFiizBuzz(){
-    
-    localStorage.setItem('mondeUnNiveau',10);
     if (localStorage.getItem('mondeUnNiveau') == null){
-        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+        localStorage.setItem('mondeUnNiveau',1);
     }else{
         mondeUnNiveau=localStorage.getItem('mondeUnNiveau');
         indiceI=mondeUnNiveau-1;
@@ -99,7 +97,14 @@ function affectationDesFiizBuzz(){
         buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][4]
     }
     //-------------------------------------------------------------------
-    fb = quantiteDeFizzBuzzParNiveauEtParMonde[monde-1][indiceI]
+  
+    if (localStorage.getItem('monde') == null){
+        localStorage.setItem('monde',1);
+    }else{
+        monde=localStorage.getItem('monde');
+        fb = quantiteDeFizzBuzzParNiveauEtParMonde[localStorage.getItem("monde")-1][indiceI]
+    }
+    
 
     timer1()
 }
@@ -126,7 +131,9 @@ function timer1(){
     for(let i=0;i<max;i++){
         tNbre[max]=false;
     }
-    document.getElementById('title').innerHTML="Fizz = " + nbre1 + " Buzz = " + nbre2;
+     document.getElementById('monde').innerHTML="Monde "+ monde;console.log('monde: '+monde);
+    document.getElementById('niveau').innerHTML="Niveau " + mondeUnNiveau;
+
     myinterval=setInterval(deplacement,1);
 }
 
@@ -381,6 +388,12 @@ function scores(){
 //-----------------------------------------------------------------------------------------------------------
 
 function mondeSuivant(){
-    monde++;mondeUnNiveau=1;
-    affectationDesFiizBuzz();
+    monde++;localStorage.setItem("monde", monde);
+
+    mondeUnNiveau=1;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+    console.log("monde "+ monde);
+    console.log(affectationDesFiizBuzz('mondeUnNiveau '+mondeUnNiveau));
+    
+
+
 }
