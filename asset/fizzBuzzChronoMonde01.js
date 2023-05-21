@@ -131,7 +131,7 @@ function timer1(){
     for(let i=0;i<max;i++){
         tNbre[max]=false;
     }
-     document.getElementById('monde').innerHTML="Monde "+ monde;console.log('monde: '+monde);
+     document.getElementById('monde').innerHTML="Monde "+ monde;
     document.getElementById('niveau').innerHTML="Niveau " + mondeUnNiveau;
 
     myinterval=setInterval(deplacement,1);
@@ -176,7 +176,7 @@ function timer1(){
 //--------------------------------------------------------------------------------------------------------------    
 
     function timer2(){
-            k=0;
+           
             doudou=setInterval(deplacement2,40);
     
     }
@@ -185,10 +185,10 @@ function timer1(){
 
     function deplacement2(){
     
-        if (k<40){
+        if (k<screen.width){
            
-            k++;
-            document.getElementById("card").style.left = 50+55*k+"px";
+            k=k+30;
+            document.getElementById("card").style.left = k+"px";
             
         }else {
                 clearInterval( doudou);
