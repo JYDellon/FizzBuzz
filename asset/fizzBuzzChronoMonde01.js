@@ -52,7 +52,7 @@ document.getElementById("card").style.fontSize="5px";
 
 
 function affectationDesFiizBuzz(){
-    compteur=0;console.log("mondeUnNiveau "+mondeUnNiveau);// a effacer dès que le changement de monde sera OK
+    
     localStorage.setItem('mondeUnNiveau',10);
     if (localStorage.getItem('mondeUnNiveau') == null){
         localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
