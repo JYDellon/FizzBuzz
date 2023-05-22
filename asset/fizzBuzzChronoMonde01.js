@@ -345,7 +345,7 @@ function niveauTermine(){
     if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
         alert('niveau '+indiceI +' terminé');
-        h=0;k=-50;
+        h=0;k=-250;
         affectationDesFiizBuzz();
         timer1();
     }else {
