@@ -88,7 +88,7 @@ img{
 }
 
 #tempo{
-    position: fixed;
+    position: relative;
     top: 50px;
     left: 0px;
     color: rgb(31, 33, 160);
