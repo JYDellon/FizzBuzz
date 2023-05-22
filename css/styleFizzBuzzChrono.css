@@ -76,23 +76,21 @@ img{
     text-align: center;
 }
 #resultat{
-    margin-top: 1em;
-    color: white;
+    color: rgb(4, 4, 4);
     text-align: center;
     font-size: 3em;
 }
 
 #record{
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 1em;
 }
 
 #tempo{
-    position: relative;
-    top: 200px;
+    position: fixed;
+    top: 50px;
     left: 0px;
-    height: 75px;
     color: rgb(31, 33, 160);
     text-align: center;
 }
@@ -144,7 +142,7 @@ img{
     }
     
     #resultat{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 2em;
     }
@@ -157,7 +155,7 @@ img{
         text-align: center;
     }
     #record{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 1.3em;
     }
@@ -202,7 +200,7 @@ img{
     }
     
     #resultat{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 2em;
     }
@@ -215,7 +213,7 @@ img{
         text-align: center;
     }
     #record{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         font-size: 1.3em;
     }

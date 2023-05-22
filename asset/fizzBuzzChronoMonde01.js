@@ -1,7 +1,7 @@
 
 
 var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
-var quantiteDeNbre1EtNbre2ParMonde=[[5,4,2,2,2],[7,5,4,3,2],[8,6,6,4,3],[10,7,8,5,4],[17,8,10,7,5],[19,10,12,9,6],[21,12,14,11,6],[25,14,16,12,8],[30,16,18,13,8],[34,17,20,14,9]];
+var quantiteDeNbre1EtNbre2ParMonde=[[5,4,2,2,2],[7,5,4,3,2],[8,6,6,4,3],[10,7,8,5,4],[17,8,10,7,5],[19,10,12,9,6],[21,12,14,11,6],[25,14,16,12,8],[30,16,18,13,8],[34,17,20,13,8]];
 var quantiteDeFizzBuzzParNiveauEtParMonde=[[2,1,1,1,1,1,1,1,1,1],[4,2,2,1,1,1,1,1,1,1],[6,3,2,2,2,2,2,1,1,1],[8,4,3,2,3,2,2,1,1,1],[10,5,4,3,3,2,2,1,1,1],[12,6,4,3,4,3,3,2,1,1],[14,7,5,4,5,3,3,2,2,2],[16,8,6,4,5,4,3,2,2,2],[17,9,7,5,6,4,6,3,2,2],[17,11,8,5,7,5,6,3,2,2]];
 var indiceI=0;
 var erreur = 0;var coins = 0;
@@ -49,21 +49,18 @@ var marge=(screen.width)-(document.getElementById("card").offsetWidth)
 var h=0;var k=-50;
 document.getElementById("card").style.position="fixed";
 document.getElementById("card").style.top = "100px";
-document.getElementById("card").style.left = "-50px";
+document.getElementById("card").style.left = "-500px";
 document.getElementById("card").style.fontSize="5px";
 
 //--------------------------------------------------------------------------------------------------------------
 
-onload = function timer(){
-    
-    affectationDesFiizBuzz();
-    
-
+onload = function timer(){ 
+    affectationDesFizzBuzz();
 }
 
 //--------------------------------------------------------------------------------------------------------------
 
-function affectationDesFiizBuzz(){
+function affectationDesFizzBuzz(){
     console.log(mondeUnNiveau);
     if (localStorage.getItem('mondeUnNiveau') == NaN || localStorage.getItem('mondeUnNiveau') == null){
         localStorage.setItem('mondeUnNiveau',1);
@@ -130,7 +127,6 @@ function timer1(){
     }
      document.getElementById('monde').innerHTML="Monde "+ monde;
     document.getElementById('niveau').innerHTML="Niveau " + mondeUnNiveau;
-
     myinterval=setInterval(deplacement,1);
 }
 
@@ -138,12 +134,12 @@ function timer1(){
 //--------------------------------------------------------------------------------------------------------------
 
     function deplacement(){
-    
+        
         if (k<(marge/2)){
             
             k=k+6;
             document.getElementById("card").style.left = k+"px";
-            document.getElementById("card").style.transitionDuration = "2s";
+            document.getElementById("card").style.transitionDuration = "1s";
             
         }else {
                 clearInterval(myinterval);
@@ -330,8 +326,8 @@ function fizzBuzz(choix){
 //----------------------------------objectifs--------------------------------------    
     
 
-    if (fizz+buzz+fb == 0){k=-50;k=0;
-        niveauTermine();
+    if (fizz+buzz+fb == 0){k=-50;
+                niveauTermine();
     }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
     document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
@@ -345,8 +341,8 @@ function niveauTermine(){
     if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
         alert('niveau '+indiceI +' terminé');
-        h=0;k=-250;
-        affectationDesFiizBuzz();
+        h=0;k=-50;
+        affectationDesFizzBuzz();
         timer1();
     }else {
         mondeSuivant();
@@ -386,12 +382,11 @@ function scores(){
 //-----------------------------------------------------------------------------------------------------------
 
 function mondeSuivant(){
+
     monde++;localStorage.setItem("monde", monde);
 
     mondeUnNiveau=1;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
     console.log("monde "+ monde);
-    console.log(affectationDesFiizBuzz('mondeUnNiveau '+mondeUnNiveau));
+    console.log(affectationDesFizzBuzz('mondeUnNiveau '+mondeUnNiveau));
     
-
-
 }
