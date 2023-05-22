@@ -179,7 +179,7 @@ function timer1(){
 
     function deplacement2(){
     
-        if (k<screen.width){
+        if (k<1.5*screen.width){
            
             k=k+30;
             document.getElementById("card").style.left = k+"px";
