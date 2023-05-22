@@ -61,6 +61,7 @@ onload = function timer(){
 //--------------------------------------------------------------------------------------------------------------
 
 function affectationDesFizzBuzz(){
+    h=0;k=-50;
     console.log(mondeUnNiveau);
     if (localStorage.getItem('mondeUnNiveau') == NaN || localStorage.getItem('mondeUnNiveau') == null){
         localStorage.setItem('mondeUnNiveau',1);
@@ -127,6 +128,8 @@ function timer1(){
     }
      document.getElementById('monde').innerHTML="Monde "+ monde;
     document.getElementById('niveau').innerHTML="Niveau " + mondeUnNiveau;
+    document.getElementById('title').innerHTML="Diviseurs: " + nbre1 + " et " + nbre2;
+    
     myinterval=setInterval(deplacement,1);
 }
 
@@ -341,7 +344,6 @@ function niveauTermine(){
     if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
         alert('niveau '+indiceI +' terminé');
-        h=0;k=-50;
         affectationDesFizzBuzz();
         timer1();
     }else {
