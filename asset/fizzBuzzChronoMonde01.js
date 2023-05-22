@@ -294,7 +294,7 @@ function fizzBuzz(choix){
             compteur++;
             scores();
         }else {
-            erreur++;
+            // erreur++;
             result="INCORRECT"; 
             cptVies=3-erreur;
             document.getElementById('cptVies').innerHTML = cptVies;
