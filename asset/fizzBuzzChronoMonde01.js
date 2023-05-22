@@ -115,11 +115,6 @@ function affectationDesFiizBuzz(){
 
 function timer1(){
     
-
-
-    // if((nbre1 == 5 && nbre2 == 11)||(nbre1 == 7 && nbre2 == 11)){
-    //     fb=2;
-    // }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
     document.getElementById('fizz').style.fontSize="25px";
     document.getElementById('fizz').style.fontWeight="bold";
@@ -145,9 +140,10 @@ function timer1(){
     function deplacement(){
     
         if (k<(marge/2)){
-    
+            
             k=k+6;
             document.getElementById("card").style.left = k+"px";
+            document.getElementById("card").style.transitionDuration = "2s";
             
         }else {
                 clearInterval(myinterval);
