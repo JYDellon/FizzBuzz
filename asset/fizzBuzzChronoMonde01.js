@@ -329,18 +329,19 @@ function fizzBuzz(choix){
 //----------------------------------objectifs--------------------------------------    
     
 
-    if (fizz+buzz+fb == 0){k=-50;
+    if (fizz+buzz+fb == 0){
                 niveauTermine();
     }
     document.getElementById('fizz').innerHTML = "fizz: "+ fizz;
     document.getElementById('buzz').innerHTML =  "buzz: "+ buzz;
     document.getElementById('fb').innerHTML =  "fizzbuzz: "+ fb;
-//------------------------------------------
+
 }
 
 //--------------------------------------------------------------------------------------------------------------
 
 function niveauTermine(){
+    
     if (mondeUnNiveau<10){
         indiceI++; mondeUnNiveau++;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
         alert('niveau '+indiceI +' terminé');
@@ -384,10 +385,18 @@ function scores(){
 
 function mondeSuivant(){
 
-    monde++;localStorage.setItem("monde", monde);
+    if (monde<10){
 
-    mondeUnNiveau=1;localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
-    console.log("monde "+ monde);
-    console.log(affectationDesFizzBuzz('mondeUnNiveau '+mondeUnNiveau));
+        monde++;
+        localStorage.setItem("monde", monde);
+        mondeUnNiveau=1;
+        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+        location.reload();
+
+    }else{alert('fin du jeu');
+
+
+
+    }   
     
 }
