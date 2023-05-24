@@ -1,4 +1,4 @@
-
+localStorage.clear();
 
 var indiceUn;var indiceDeux;var indiceTrois;var indiceQuatre;var indiceCinq;var indiceSix;var indiceSept;var indiceHuit;var indiceNeuf;var indiceDix;
 var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
@@ -358,7 +358,9 @@ function mondeSuivant(){
 
     if (monde<10){
 
-        monde++;
+        monde++; localStorage.setItem("monde", monde);
+        mondeUnNiveau=1; localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+
         if (monde == 2){
             indiceDeux=3;localStorage.setItem('indiceDeux',indiceDeux);
         }else if (monde == 3){
@@ -378,9 +380,9 @@ function mondeSuivant(){
         }else if (monde == 10){
             indiceDix=19;localStorage.setItem('indiceDix',indiceDix);
         }
-        localStorage.setItem("monde", monde);
-        mondeUnNiveau=1;
-        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+        
+        
+        
         location.reload();
 
     }else{alert('fin du jeu');
