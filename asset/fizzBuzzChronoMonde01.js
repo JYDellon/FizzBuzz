@@ -1,5 +1,5 @@
 
-
+localStorage.clear();
 var indiceUn;var indiceDeux;var indiceTrois;var indiceQuatre;var indiceCinq;var indiceSix;var indiceSept;var indiceHuit;var indiceNeuf;var indiceDix;
 var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
 var quantiteDeNbre1EtNbre2ParMonde=[[5,4,2,2,2],[7,5,4,3,2],[8,6,6,4,3],[10,7,8,5,4],[17,8,10,7,5],[19,10,12,9,6],[21,12,14,11,6],[25,14,16,12,8],[30,16,18,13,8],[34,17,20,13,8]];
