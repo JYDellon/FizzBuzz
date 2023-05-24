@@ -25,8 +25,10 @@ document.getElementById("un").appendChild(img1);
 img1.style.width = '100%';
 img1.style.height = '400px';
 
+
 img2 = document.createElement("img");
-img2.src = tImage[4];
+if (localStorage.getItem('monde') == 2){img2.src = tImage[3];
+}else{img2.src = tImage[4];}
 document.getElementById("deux").appendChild(img2);
 img2.style.width = '100%';
 img2.style.height = '400px';

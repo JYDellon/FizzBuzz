@@ -356,7 +356,7 @@ function mondeSuivant(){
 
     if (monde<10){
 
-        monde++; 
+        monde++; localStorage.setItem('monde',monde);
         mondeUnNiveau=1; localStorage.setItem('mondeUnNiveau',mondeUnNiveau);        
         location.reload();
 
