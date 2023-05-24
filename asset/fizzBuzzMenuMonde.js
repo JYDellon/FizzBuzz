@@ -25,7 +25,6 @@ document.getElementById("un").appendChild(img1);
 img1.style.width = '100%';
 img1.style.height = '400px';
 
-
 img2 = document.createElement("img");
 if (localStorage.getItem('monde') == 2){
   img2.src = tImage[3];
@@ -36,49 +35,73 @@ img2.style.width = '100%';
 img2.style.height = '400px';
 
 img3 = document.createElement("img");
-img3.src = tImage[6];
+if (localStorage.getItem('monde') == 3){
+  img3.src = tImage[5];
+  mondeParcouru[3] = true;
+}else{img3.src = tImage[6];}
 document.getElementById("trois").appendChild(img3);
 img3.style.width = '100%';
 img3.style.height = '400px';
 
 img4 = document.createElement("img");
-img4.src = tImage[8];
+if (localStorage.getItem('monde') == 4){
+  img4.src = tImage[7];
+  mondeParcouru[4] = true;
+}else{img4.src = tImage[8];}
 document.getElementById("quatre").appendChild(img4);
 img4.style.width = '100%';
 img4.style.height = '400px';
 
 img5 = document.createElement("img");
-img5.src = tImage[10];
+if (localStorage.getItem('monde') == 5){
+  img5.src = tImage[9];
+  mondeParcouru[5] = true;
+}else{img5.src = tImage[10];}
 document.getElementById("cinq").appendChild(img5);
 img5.style.width = '100%';
 img5.style.height = '400px';
 
 img6 = document.createElement("img");
-img6.src = tImage[12];
+if (localStorage.getItem('monde') == 6){
+  img6.src = tImage[11];
+  mondeParcouru[6] = true;
+}else{img6.src = tImage[12];}
 document.getElementById("six").appendChild(img6);
 img6.style.width = '100%';
 img6.style.height = '400px';
 
 img7 = document.createElement("img");
-img7.src = tImage[14];
+if (localStorage.getItem('monde') == 7){
+  img7.src = tImage[13];
+  mondeParcouru[7] = true;
+}else{img7.src = tImage[14];}
 document.getElementById("sept").appendChild(img7);
 img7.style.width = '100%';
 img7.style.height = '400px';
 
 img8 = document.createElement("img");
-img8.src = tImage[16];
+if (localStorage.getItem('monde') == 8){
+  img8.src = tImage[15];
+  mondeParcouru[8] = true;
+}else{img8.src = tImage[16];}
 document.getElementById("huit").appendChild(img8);
 img8.style.width = '100%';
 img8.style.height = '400px';
 
 img9 = document.createElement("img");
-img9.src = tImage[18];
+if (localStorage.getItem('monde') == 9){
+  img9.src = tImage[17];
+  mondeParcouru[9] = true;
+}else{img9.src = tImage[18];}
 document.getElementById("neuf").appendChild(img9);
 img9.style.width = '100%';
 img2.style.height = '400px';
 
 img10 = document.createElement("img");
-img10.src = tImage[20];
+if (localStorage.getItem('monde') == 10){
+  img10.src = tImage[19];
+  mondeParcouru[10] = true;
+}else{img10.src = tImage[20];}
 document.getElementById("dix").appendChild(img10);
 img10.style.width = '100%';
 img10.style.height = '400px';
