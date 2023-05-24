@@ -353,6 +353,45 @@ function niveauTermine(){
 
 //--------------------------------------------------------------------------------------------------------------
 
+function mondeSuivant(){
+
+    if (monde<10){
+
+        monde++;
+        if (monde == 2){
+            indiceDeux=3;localStorage.setItem('indiceDeux',indiceDeux);
+        }else if (monde == 3){
+            indiceTrois=5;localStorage.setItem('indiceTrois',indiceTrois);
+        }else if (monde == 4){
+            indiceQuatre=7;localStorage.setItem('indiceQuatre',indiceQuatre);
+        }else if (monde == 5){
+            indiceCinq=9;localStorage.setItem('indiceCinq',indiceCinq);
+        }else if (monde == 6){
+            indiceSix=11;localStorage.setItem('indiceSix',indiceSix);
+        }else if (monde == 7){
+            indiceSept=13;localStorage.setItem('indiceSept',indiceSept);
+        }else if (monde == 8){
+            indiceHuit=15;localStorage.setItem('indiceHuit',indiceHuit);
+        }else if (monde == 9){
+            indiceNeuf=17;localStorage.setItem('indiceNeuf',indiceNeuf);
+        }else if (monde == 10){
+            indiceDix=19;localStorage.setItem('indiceDix',indiceDix);
+        }
+        localStorage.setItem("monde", monde);
+        mondeUnNiveau=1;
+        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
+        location.reload();
+
+    }else{alert('fin du jeu');
+
+
+
+    }   
+    
+}
+
+//--------------------------------------------------------------------------------------------------------------
+
 function record1(){
         if (localStorage.getItem('compteurChrono2'+nbre1+nbre2) == null ){
         
@@ -383,20 +422,3 @@ function scores(){
 
 //-----------------------------------------------------------------------------------------------------------
 
-function mondeSuivant(){
-
-    if (monde<10){
-
-        monde++;
-        localStorage.setItem("monde", monde);
-        mondeUnNiveau=1;
-        localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
-        location.reload();
-
-    }else{alert('fin du jeu');
-
-
-
-    }   
-    
-}
