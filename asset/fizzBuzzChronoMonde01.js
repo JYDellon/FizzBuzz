@@ -1,6 +1,4 @@
 
-
-var indiceUn;var indiceDeux;var indiceTrois;var indiceQuatre;var indiceCinq;var indiceSix;var indiceSept;var indiceHuit;var indiceNeuf;var indiceDix;
 var coupleNbre1Nbre2=[[2,3],[2,5],[2,7],[2,11],[3,5],[3,7],[3,11],[5,7],[5,11],[7,11]];
 var quantiteDeNbre1EtNbre2ParMonde=[[5,4,2,2,2],[7,5,4,3,2],[8,6,6,4,3],[10,7,8,5,4],[17,8,10,7,5],[19,10,12,9,6],[21,12,14,11,6],[25,14,16,12,8],[30,16,18,13,8],[34,17,20,13,8]];
 var quantiteDeFizzBuzzParNiveauEtParMonde=[[2,1,1,1,1,1,1,1,1,1],[4,2,2,1,1,1,1,1,1,1],[6,3,2,2,2,2,2,1,1,1],[8,4,3,2,3,2,2,1,1,1],[10,5,4,3,3,2,2,1,1,1],[12,6,4,3,4,3,3,2,1,1],[14,7,5,4,5,3,3,2,2,2],[16,8,6,4,5,4,3,2,2,2],[17,9,7,5,6,4,4,3,2,2],[17,10,8,5,7,5,4,3,2,2]];
@@ -98,7 +96,7 @@ function affectationDesFizzBuzz(){
         buzz=quantiteDeNbre1EtNbre2ParMonde[mondeUnNiveau-1][4]
     }
     //-------------------------------------------------------------------
-  
+  console.log('monde ='+monde)
     if (localStorage.getItem('monde') == null){
         localStorage.setItem('monde',1);
     }else{
@@ -358,38 +356,11 @@ function mondeSuivant(){
 
     if (monde<10){
 
-        monde++; localStorage.setItem("monde", monde);
-        mondeUnNiveau=1; localStorage.setItem('mondeUnNiveau',mondeUnNiveau);
-
-        if (monde == 2){
-            indiceDeux=3;localStorage.setItem('indiceDeux',indiceDeux);
-        }else if (monde == 3){
-            indiceTrois=5;localStorage.setItem('indiceTrois',indiceTrois);
-        }else if (monde == 4){
-            indiceQuatre=7;localStorage.setItem('indiceQuatre',indiceQuatre);
-        }else if (monde == 5){
-            indiceCinq=9;localStorage.setItem('indiceCinq',indiceCinq);
-        }else if (monde == 6){
-            indiceSix=11;localStorage.setItem('indiceSix',indiceSix);
-        }else if (monde == 7){
-            indiceSept=13;localStorage.setItem('indiceSept',indiceSept);
-        }else if (monde == 8){
-            indiceHuit=15;localStorage.setItem('indiceHuit',indiceHuit);
-        }else if (monde == 9){
-            indiceNeuf=17;localStorage.setItem('indiceNeuf',indiceNeuf);
-        }else if (monde == 10){
-            indiceDix=19;localStorage.setItem('indiceDix',indiceDix);
-        }
-        
-        
-        
+        monde++; 
+        mondeUnNiveau=1; localStorage.setItem('mondeUnNiveau',mondeUnNiveau);        
         location.reload();
 
-    }else{alert('fin du jeu');
-
-
-
-    }   
+    }else{alert('fin du jeu');}   
     
 }
 
