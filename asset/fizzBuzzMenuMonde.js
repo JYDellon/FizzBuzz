@@ -27,7 +27,9 @@ img1.style.height = '400px';
 
 
 img2 = document.createElement("img");
-if (localStorage.getItem('monde') == 2){img2.src = tImage[3];
+if (localStorage.getItem('monde') == 2){
+  img2.src = tImage[3];
+  mondeParcouru[2] = true;
 }else{img2.src = tImage[4];}
 document.getElementById("deux").appendChild(img2);
 img2.style.width = '100%';
